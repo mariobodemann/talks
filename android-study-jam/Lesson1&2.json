@@ -1,0 +1,748 @@
+{
+  "slides": [
+    {
+      "components": [
+        {
+          "src": "http://developer.android.com/images/brand/Android_Robot_200.png",
+          "type": "Image",
+          "x": 211,
+          "y": -3,
+          "scale": {
+            "x": 3,
+            "y": 3,
+            "width": 602,
+            "height": 704.34
+          },
+          "imageType": "PNG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 361,
+          "y": 268,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Android Study<br><div align=\"center\">Group Berlin<br><br><b>Lesson 1 &amp; 2</b><br></div>",
+          "size": 48,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 62,
+          "y": 729,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.<br>",
+          "size": 12,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 10,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 0,
+      "selected": false,
+      "active": false,
+      "x": 495,
+      "y": 868
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 132,
+          "y": 298,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div align=\"center\"><font color=\"#eeeeee\">Lesson 1: </font><br></div><div align=\"center\"><font color=\"#eeeeee\">Create Project Sunshine</font><br></div>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 1,
+      "selected": false,
+      "active": false,
+      "background": "android-bg",
+      "x": 440,
+      "y": 703
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh5.ggpht.com/cpalaaOPIUs6KodCewwvyB7I-N_zCI6I-qEYMlvrYBMOqYFuKqRFb3RIHL1o5rC-lyKNnO8hGJgtWi5ZgNk=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 2,
+          "y": 97,
+          "scale": {
+            "x": 1.1473565804274466,
+            "y": 1.1473565804274466,
+            "width": 1020,
+            "height": 573.6782902137232
+          },
+          "imageType": "COM/CPALAAOPIUS6KODCEWWVYB7I-N_ZCI6I-QEYMLVRYBMOQYFUKQRFB3RIHL1O5RC-LYKNNO8HGJGTWI5ZGNK=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "x": 440,
+      "y": 644
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/awd4Z7RvI0VB0zgMnk-nypujhzqrK0noeKHJHEzeEz0sOw-vTcit7xq2PkFATTDtBAYFQhQWGZ1uQOFVQi62=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": -4,
+          "y": 94,
+          "scale": {
+            "x": 1.1619797525309337,
+            "y": 1.1619797525309337,
+            "width": 1033,
+            "height": 580.9898762654668
+          },
+          "imageType": "COM/AWD4Z7RVI0VB0ZGMNK-NYPUJHZQRK0NOEKHJHEZEEZ0SOW-VTCIT7XQ2PKFATTDTBAYFQHQWGZ1UQOFVQI62=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "x": 440,
+      "y": 579
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/LYWMfEa214HyJbajiDvjXjKBhadzK0PrwAp_taey_N0SgtVMM8rS4xgdnZ_ptC_30ihNAXYhHYoIxvmAFSzI=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": -1,
+          "y": 96,
+          "scale": {
+            "x": 1.1541057367829022,
+            "y": 1.1541057367829022,
+            "width": 1026,
+            "height": 577.052868391451
+          },
+          "imageType": "COM/LYWMFEA214HYJBAJIDVJXJKBHADZK0PRWAP_TAEY_N0SGTVMM8RS4XGDNZ_PTC_30IHNAXYHHYOIXVMAFSZI=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 4,
+      "selected": false,
+      "active": false,
+      "x": 440,
+      "y": 520
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh3.ggpht.com/Nj45HPp6fJkOB8sNquAOzxGERQSikgYp-kgyqZX_r-eMajUFvUmW_bujSI5kSY2RErgJ4FAddyKoePKsbd8=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 2,
+          "y": 97,
+          "scale": {
+            "x": 1.1473565804274466,
+            "y": 1.1473565804274466,
+            "width": 1020,
+            "height": 573.6782902137232
+          },
+          "imageType": "COM/NJ45HPP6FJKOB8SNQUAOZXGERQSIKGYP-KGYQZX_R-EMAJUFVUMW_BUJSI5KSY2RERGJ4FADDYKOEPKSBD8=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 5,
+      "selected": false,
+      "active": false,
+      "x": 440,
+      "y": 449
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh6.ggpht.com/MFgJKMyfjX94xe-HWvtCmL9ZJRtOTWELHXwwTiZLfV3tDp5Ui_EpC4Y7qlQSkQfiivvwHEJduZcTOTY5Vts=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": -1,
+          "y": 95,
+          "scale": {
+            "x": 1.155230596175478,
+            "y": 1.155230596175478,
+            "width": 1027,
+            "height": 577.615298087739
+          },
+          "imageType": "COM/MFGJKMYFJX94XE-HWVTCML9ZJRTOTWELHXWWTIZLFV3TDP5UI_EPC4Y7QLQSKQFIIVVWHEJDUZCTOTY5VTS=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 6,
+      "selected": false,
+      "active": false,
+      "x": 440,
+      "y": 389
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 229,
+          "y": 255,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div align=\"center\"><font color=\"#eeeeee\">Lesson 2:</font><br></div><div align=\"center\"><font color=\"#eeeeee\">Connect Sunshine <br>to&nbsp; the cloud</font><br></div>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 7,
+      "selected": false,
+      "active": false,
+      "background": "android-bg",
+      "x": 545,
+      "y": 701,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh6.ggpht.com/v33-adGTUoAg4UGjbRBMTIpJ-q-oF7wd3ILZ7Uvs8aClHAeY30-orryqT3xWIhPQ2R-Hf8P_o-p6NaxLMQ=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": -22,
+          "y": 84,
+          "scale": {
+            "x": 1.201349831271091,
+            "y": 1.201349831271091,
+            "width": 1068,
+            "height": 600.6749156355455
+          },
+          "imageType": "COM/V33-ADGTUOAG4UGJBRBMTIPJ-Q-OF7WD3ILZ7UVS8ACLHAEY30-ORRYQT3XWIHPQ2R-HF8P_O-P6NAXLMQ=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 195,
+          "y": 402,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "http://api.openweathermap.org/data/2.5<br><font color=\"#ab0a0a\">/forecast/daily/</font><br><font color=\"#ab0a0a\">?cnt=7</font><br>&amp;q=94043,<font color=\"#ab0a0a\">USA<br></font>&amp;units=metric&amp;mode=json",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 8,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 642
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/360r5O3DqC5VPwJkma9Qak0krcHovsDxkxaeQEv1H-k2xulqHgg2Q7jMpc0lOYP0ZgSfBE9UBHYrfe2glU0=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 4,
+          "y": 98,
+          "scale": {
+            "x": 1.1439820022497187,
+            "y": 1.1439820022497187,
+            "width": 1016.9999999999999,
+            "height": 571.9910011248594
+          },
+          "imageType": "COM/360R5O3DQC5VPWJKMA9QAK0KRCHOVSDXKXAEQEV1H-K2XULQHGG2Q7JMPC0LOYP0ZGSFBE9UBHYRFE2GLU0=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": -3,
+          "y": 491,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font color=\"#ab0a0a\">Also Possible through <br></font><div align=\"center\"><font color=\"#ab0a0a\">Android Studio</font><br></div>",
+          "selected": false,
+          "rotate": 0.41
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 9,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 579
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh5.ggpht.com/xqEltWBMtSvKOuaE08Xb0PmmBG4KYES56UbO28UykJcOkC7O1GeptSBx2XQZ1BA7dc4XwJcXVJgtPe3EKGU=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 1,
+          "y": 96,
+          "scale": {
+            "x": 1.1507311586051743,
+            "y": 1.1507311586051743,
+            "width": 1022.9999999999999,
+            "height": 575.3655793025871
+          },
+          "imageType": "COM/XQELTWBMTSVKOUAE08XB0PMMBG4KYES56UBO28UYKJCOKC7O1GEPTSBX2XQZ1BA7DC4XWJCXVJGTPE3EKGU=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 402,
+          "y": 492,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font color=\"#ab0a0a\">AsyncTask</font>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 10,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 515
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/wvTigqCLgoyVfqAFOgJQeitpTf8CcquLjpBikNgp2koYkxB2dnz5B7OJFhBNPKs_O4HopMtrAp-nxpd_uw=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": -3,
+          "y": 94,
+          "scale": {
+            "x": 1.1597300337457819,
+            "y": 1.1597300337457819,
+            "width": 1031,
+            "height": 579.8650168728909
+          },
+          "imageType": "COM/WVTIGQCLGOYVFQAFOGJQEITPTF8CCQULJPBIKNGP2KOYKXB2DNZ5B7OJFHBNPKS_O4HOPMTRAP-NXPD_UW=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 807,
+          "y": 67,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font color=\"#ab0a0a\">Interact!</font>",
+          "selected": false,
+          "rotate": 0.49
+        },
+        {
+          "TextBox": {},
+          "x": 11,
+          "y": 77,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font color=\"#ab0a0a\">Interact!</font>",
+          "selected": false,
+          "rotate": -0.41
+        },
+        {
+          "TextBox": {},
+          "x": 795,
+          "y": 549,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 54,
+          "text": "<font color=\"#ab0a0a\">Interact!</font>",
+          "selected": false,
+          "rotate": -0.55
+        },
+        {
+          "TextBox": {},
+          "x": 37,
+          "y": 661,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font color=\"#ab0a0a\">Interact!</font>",
+          "selected": false,
+          "rotate": 0.49
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 11,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 451
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh3.ggpht.com/q-UTvkIfRpwwTJx04H_DHR4dz_9-ybNvf-uduNpgtm7KApfnihFhbwvdnuZlvS3o1bQFLtIaUcWpgidxgqA=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 2,
+          "y": 97,
+          "scale": {
+            "x": 1.1484814398200225,
+            "y": 1.1484814398200225,
+            "width": 1021,
+            "height": 574.2407199100112
+          },
+          "imageType": "COM/Q-UTVKIFRPWWTJX04H_DHR4DZ_9-YBNVF-UDUNPGTM7KAPFNIHFHBWVDNUZLVS3O1BQFLTIAUCWPGIDXGQA=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 180 180\" preserveAspectRatio=\"none\"><polygon points=\"90,0 30,170 180,50 0,50 150,170\"/></svg>",
+          "type": "Shape",
+          "x": 59,
+          "y": 278,
+          "scale": {
+            "width": 72.83317553417965,
+            "height": 68.03608772599792
+          },
+          "selected": false,
+          "fill": "#1bdb34"
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 12,
+      "selected": false,
+      "active": false,
+      "x": 546,
+      "y": 381
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/i23vVlrYf0CDvOHTAYhVbROS8fxyajijiVrc7Zx7vbc_puHVrTz4KVRafd61wywXNPkPAeZOOB6FSRLrBX4=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 0,
+          "y": 96,
+          "scale": {
+            "x": 1.1518560179977504,
+            "y": 1.1518560179977504,
+            "width": 1024,
+            "height": 575.9280089988752
+          },
+          "imageType": "COM/I23VVLRYF0CDVOHTAYHVBROS8FXYAJIJIVRC7ZX7VBC_PUHVRTZ4KVRAFD61WYWXNPKPAEZOOB6FSRLRBX4=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 13,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 322
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh5.ggpht.com/i5-hpUfNa1Y_kHWelduYyplY6mvJAsohBx_HBwkuxh8ixrrR7xwKlEHLBAyi3gbKkjSftOvmel3lyBgtM3MZ=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 3,
+          "y": 98,
+          "scale": {
+            "x": 1.1451068616422948,
+            "y": 1.1451068616422948,
+            "width": 1018.0000000000001,
+            "height": 572.5534308211475
+          },
+          "imageType": "COM/I5-HPUFNA1Y_KHWELDUYYPLY6MVJASOHBX_HBWKUXH8IXRRR7XWKLEHLBAYI3GBKKJSFTOVMEL3LYBGTM3MZ=S889#W=1920&H=1080",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 302,
+          "y": 563,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<font color=\"#ab0a0a\">android.permission.INTERNET</font>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 14,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 254
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 3,
+          "y": 120,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "&nbsp;&nbsp;&nbsp; public static double getMaxTemperatureForDay(...<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;throws JSONException {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final JSONObject json = new JSONObject(weatherJsonStr);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final JSONArray list = json.getJSONArray(\"list\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final Object maybeDay = list.get(dayIndex);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (maybeDay instanceof JSONObject) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final JSONObject day = (JSONObject) maybeDay;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final JSONObject temp = day.getJSONObject(\"temp\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return temp.getDouble(\"max\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0.0;<br>&nbsp;&nbsp;&nbsp; }",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 15,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 179,
+      "background": "bg-solid-light"
+    },
+    {
+      "components": [
+        {
+          "src": "https://lh4.ggpht.com/89I95JzWYwFfzeaBiwItxaXX7x5qjJmsXsJ5rn8EqsEfbIXrIL4aajyR8yB78SNbxeYKIb4skjFYmavqu-PT=s889#w=1920&h=1080",
+          "type": "Image",
+          "x": 4,
+          "y": 98,
+          "scale": {
+            "x": 1.1439820022497187,
+            "y": 1.1439820022497187,
+            "width": 1016.9999999999999,
+            "height": 571.9910011248594
+          },
+          "imageType": "COM/89I95JZWYWFFZEABIWITXAXX7X5QJJMSXSJ5RN8EQSEFBIXRIL4AAJYR8YB78SNBXEYKIB4SKJFYMAVQU-PT=S889#W=1920&H=1080",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 16,
+      "selected": false,
+      "active": false,
+      "x": 545,
+      "y": 107
+    },
+    {
+      "components": [
+        {
+          "src": "http://developer.android.com/images/brand/Android_Robot_200.png",
+          "type": "Image",
+          "x": 211,
+          "y": -3,
+          "scale": {
+            "x": 3.0100000000000002,
+            "y": 3.0100000000000002,
+            "width": 602,
+            "height": 704.34
+          },
+          "imageType": "PNG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 330,
+          "y": 341,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Questions ?<br>",
+          "size": 72,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 62,
+          "y": 729,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.<br>",
+          "size": 12,
+          "selected": false
+        }
+      ],
+      "z": 800,
+      "impScale": 1,
+      "rotateX": -1.05,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 17,
+      "selected": true,
+      "active": true,
+      "x": 494,
+      "y": 751
+    }
+  ],
+  "activeSlide": {
+    "components": [
+      {
+        "src": "http://developer.android.com/images/brand/Android_Robot_200.png",
+        "type": "Image",
+        "x": 211,
+        "y": -3,
+        "scale": {
+          "x": 3.0100000000000002,
+          "y": 3.0100000000000002,
+          "width": 602,
+          "height": 704.34
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 330,
+        "y": 341,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "Questions ?<br>",
+        "size": 72,
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 62,
+        "y": 729,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.<br>",
+        "size": 12,
+        "selected": false
+      }
+    ],
+    "z": 800,
+    "impScale": 1,
+    "rotateX": -1.05,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "index": 17,
+    "selected": true,
+    "active": true,
+    "x": 494,
+    "y": 751
+  },
+  "fileName": "android-studygroup-berlin",
+  "overviewX": 493,
+  "overviewY": 487.5,
+  "deckVersion": "1.0",
+  "customBackgrounds": {
+    "bgs": [
+      {
+        "klass": "android-bg",
+        "style": "#A4C639"
+      }
+    ]
+  }
+}
