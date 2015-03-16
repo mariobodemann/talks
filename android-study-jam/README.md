@@ -4,7 +4,7 @@ Berlin Study Jam Session
 Lesson 1 and 2
 --------------
 
-This [Talk](./Lesson1&2.html) is a recap of the first two lessons of the
+This [Talk](./lesson1-2/lesson1-2.html) is a recap of the first two lessons of the
 [udacity](http://www.udacity.com) curse [Developing Android Apps - 
 Android Fundamentals](https://www.udacity.com/course/ud853). It will 
 cover a short repetition of the first lesson, essentially on how to 
