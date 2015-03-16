@@ -14,4 +14,14 @@ lesson about how to connect the sample project _Sunshine_ to the cloud.
 The talk is designed using [strut.io](http://strut.io/editor/index.html) 
 and modified by hand. If you want to see the differences, feel free to
 use [the exported json file](./Lesson1&3.json) in the editor. 
+
 Alternatively feel free to examine the git repository history ...
+
+
+Lesson 3
+--------
+
+The third talk of the same course, covering intents and activities. the
+organisation is the same ad before: *strut.io*, but this time local, 
+since the server did not seem to react.
+
