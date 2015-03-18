@@ -115,7 +115,7 @@
         {
           "TextBox": {},
           "x": 358,
-          "y": 113,
+          "y": 266,
           "scale": {
             "x": 1,
             "y": 1
@@ -129,38 +129,12 @@
           "src": "http://www.thoughtworks.com/imgs/tw-logo.png",
           "type": "Image",
           "x": 262,
-          "y": 297,
+          "y": 449,
           "scale": {
             "x": 1,
             "y": 1
           },
           "imageType": "PNG",
-          "selected": false
-        },
-        {
-          "TextBox": {},
-          "x": 495,
-          "y": 392,
-          "scale": {
-            "x": 1,
-            "y": 1
-          },
-          "type": "TextBox",
-          "size": 48,
-          "text": "<font>&amp;<br></font>",
-          "selected": false
-        },
-        {
-          "TextBox": {},
-          "x": 196,
-          "y": 468,
-          "scale": {
-            "x": 1,
-            "y": 1
-          },
-          "type": "TextBox",
-          "size": 64,
-          "text": "<b>GDG Android in Berlin</b><br>",
           "selected": false
         }
       ],
@@ -261,14 +235,14 @@
         {
           "TextBox": {},
           "x": 131,
-          "y": 191,
+          "y": 190,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
           "size": 64,
-          "text": "<div style=\"text-align: center;\"><b>Me:&nbsp;</b>Mario Bodemann</div><div style=\"text-align: center;\"><font color=\"#848282\">Android Software Engineer</font></div><div style=\"text-align: center;\"><font color=\"#848282\">@ HERE</font></div><div style=\"text-align: center;\"><br></div><div style=\"text-align: center;\"><b>Who are you?</b></div>",
+          "text": "<div style=\"text-align: center;\"><b>Me:&nbsp;</b>Mario Bodemann</div><div style=\"text-align: center;\"><font color=\"#848282\">Android Software Engineer</font></div><div style=\"text-align: center;\"><font color=\"#848282\">@HERE</font></div><div style=\"text-align: center;\"><br></div><div style=\"text-align: center;\"><b>Who are you?</b></div>",
           "selected": false
         }
       ],
@@ -1204,20 +1178,6 @@
           "size": 64,
           "text": "<font color=\"#000000\">x</font><br>",
           "selected": false
-        },
-        {
-          "TextBox": {},
-          "x": 231,
-          "y": 660,
-          "scale": {
-            "x": 1,
-            "y": 1
-          },
-          "type": "TextBox",
-          "size": 36,
-          "text": "<font color=\"#ff0000\">How to get data back from SharedPreferences?</font>",
-          "selected": false,
-          "rotate": -0.14
         }
       ],
       "z": 0,
@@ -1230,6 +1190,34 @@
       "active": false,
       "x": 2000,
       "y": 1500
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 94,
+          "y": 227,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">final SharedPreferences preferences = <br>&nbsp; &nbsp; PreferenceManager<br>&nbsp; &nbsp; &nbsp; &nbsp; .getDefaultSharedPreferences(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; getActivity());<br>location = preferences.getString(<br>&nbsp; &nbsp; getString(keyId), <br>&nbsp; &nbsp; getString(defaultId));</font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 30,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-black",
+      "x": 1998,
+      "y": 1796
     },
     {
       "components": [
@@ -1266,7 +1254,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 30,
+      "index": 31,
       "selected": false,
       "active": false,
       "x": 1700,
@@ -1293,7 +1281,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 31,
+      "index": 32,
       "selected": false,
       "active": false,
       "surface": "bg-default",
@@ -1336,7 +1324,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 32,
+      "index": 33,
       "selected": false,
       "active": false,
       "x": 1400,
@@ -1354,7 +1342,7 @@
           },
           "type": "TextBox",
           "size": 36,
-          "text": "<font color=\"#eeeeee\" face=\"Droid Sans Mono, monospace\">final String preferredLocation = ...<br>final Intent intent = new Intent(<br>&nbsp; &nbsp; Intent.ACTION_VIEW, Uri.parse(<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><font face=\"Droid Sans Mono, monospace\"><font color=\"#ff0000\">\"geo:0,0?q=\" + preferredLocation</font><br><font color=\"#eeeeee\">&nbsp; &nbsp;)</font><br><font color=\"#eeeeee\">);</font><br><br><font color=\"#eeeeee\">if (intent.</font><font color=\"#ff0000\">resolveActivity</font><font color=\"#eeeeee\">(<br>&nbsp; &nbsp; activity.getPackageManager()) != null) {</font><br><font color=\"#eeeeee\">&nbsp; &nbsp; &nbsp; &nbsp; activity.startActivity(intent);</font><br><font color=\"#eeeeee\">} else {</font><br><font color=\"#eeeeee\">&nbsp; &nbsp; Log.e(TAG, \"no app for geo ...\");</font><br><font color=\"#eeeeee\">}</font></font><br>",
+          "text": "<font color=\"#eeeeee\" face=\"Droid Sans Mono, monospace\">final String location = ...<br></font><font face=\"Droid Sans Mono, monospace\"><font color=\"#eeeeee\">final Intent intent = new Intent(<br>&nbsp; &nbsp; Intent.ACTION_VIEW,<br>&nbsp; &nbsp; Uri.parse(\"geo:0,0\").buildUpon()<br>&nbsp; &nbsp; &nbsp; &nbsp; .</font><font color=\"#ff0000\">appendQueryParameter</font><font color=\"#eeeeee\">(\"q\", location)<br>&nbsp; &nbsp; &nbsp; &nbsp; .build());<br></font><br><font color=\"#eeeeee\">if (intent.</font><font color=\"#ff0000\">resolveActivity</font><font color=\"#eeeeee\">(<br>&nbsp; &nbsp; activity.getPackageManager()) != null) {</font><br><font color=\"#eeeeee\">&nbsp; &nbsp; &nbsp; &nbsp; activity.startActivity(intent);</font><br><font color=\"#eeeeee\">} else {</font><br><font color=\"#eeeeee\">&nbsp; &nbsp; Log.e(TAG, \"no app for geo ...\");</font><br><font color=\"#eeeeee\">}</font></font><br>",
           "selected": false
         }
       ],
@@ -1363,7 +1351,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 33,
+      "index": 34,
       "selected": false,
       "active": false,
       "surface": "bg-default",
@@ -1419,7 +1407,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 34,
+      "index": 35,
       "selected": false,
       "active": false,
       "x": 1100,
@@ -1446,7 +1434,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 35,
+      "index": 36,
       "selected": false,
       "active": false,
       "surface": "bg-default",
@@ -1458,7 +1446,7 @@
       "components": [
         {
           "TextBox": {},
-          "x": 27,
+          "x": 39,
           "y": 2,
           "scale": {
             "x": 1,
@@ -1466,7 +1454,7 @@
           },
           "type": "TextBox",
           "size": 36,
-          "text": "<font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">// in onCreateOptionsMenu(Menu menu) {<br>final ShareActionProvider shareProvider =&nbsp;<br>&nbsp; &nbsp; (ShareActionProvider)<br>&nbsp; &nbsp; </font><font face=\"Droid Sans Mono, monospace\" color=\"#ff0000\">MenuItemCompat.getActionProvider</font><font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">(<br>&nbsp; &nbsp; &nbsp; &nbsp; shareMenuItem<br>&nbsp; &nbsp; );<br><br>final Intent shareIntent = <br>&nbsp; &nbsp; new Intent(Intent.ACTION_SEND);<br>shareIntent.setType(\"text/*\");<br>shareIntent.setFlags(<br>&nbsp;Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET<br>&nbsp;// &gt;= 21&nbsp;</font><font face=\"Droid Sans Mono, monospace\"><font color=\"#ff0000\">FLAG_ACTIVITY_NEW_DOCUMENT</font><br><font color=\"#eeeeee\">);</font><br><font color=\"#eeeeee\">shareIntent.putExtra(Intent.EXTRA_TEXT, </font><br><font color=\"#eeeeee\">&nbsp; &nbsp; getForecastData() + \" #SunshineApp\");</font><br><font color=\"#eeeeee\">shareProvider.setShareIntent(shareIntent);</font></font><br>",
+          "text": "<font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">// in onCreateOptionsMenu(Menu menu) {<br>final ShareActionProvider shareProvider =&nbsp;<br>&nbsp; &nbsp; (ShareActionProvider)<br>&nbsp; &nbsp; </font><font face=\"Droid Sans Mono, monospace\" color=\"#ff0000\">MenuItemCompat.getActionProvider</font><font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">(<br>&nbsp; &nbsp; &nbsp; &nbsp; shareMenuItem<br>&nbsp; &nbsp; );<br><br>final Intent shareIntent = <br>&nbsp; &nbsp; new Intent(Intent.ACTION_SEND);<br>shareIntent.setType(\"text/plain\");<br>shareIntent.setFlags(<br>&nbsp;Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET<br>&nbsp;// &gt;= 21&nbsp;</font><font face=\"Droid Sans Mono, monospace\"><font color=\"#ff0000\">FLAG_ACTIVITY_NEW_DOCUMENT</font><br><font color=\"#eeeeee\">);</font><br><font color=\"#eeeeee\">shareIntent.putExtra(Intent.EXTRA_TEXT, </font><br><font color=\"#eeeeee\">&nbsp; &nbsp; getForecastData() + \" #SunshineApp\");</font><br><font color=\"#eeeeee\">shareProvider.setShareIntent(shareIntent);</font></font><br>",
           "selected": false
         }
       ],
@@ -1475,9 +1463,9 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 36,
-      "selected": false,
-      "active": false,
+      "index": 37,
+      "selected": true,
+      "active": true,
       "surface": "bg-default",
       "x": 1100,
       "y": 2100,
@@ -1555,7 +1543,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 37,
+      "index": 38,
       "selected": false,
       "active": false,
       "x": 800,
@@ -1633,7 +1621,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 38,
+      "index": 39,
       "selected": false,
       "active": false,
       "x": 800,
@@ -1644,7 +1632,7 @@
         {
           "TextBox": {},
           "x": 421,
-          "y": 298,
+          "y": 297,
           "scale": {
             "x": 1,
             "y": 1
@@ -1660,9 +1648,9 @@
       "rotateX": 0,
       "rotateY": -0.96,
       "rotateZ": 0,
-      "index": 39,
+      "index": 40,
       "selected": false,
-      "active": true,
+      "active": false,
       "x": 1204,
       "y": 1458,
       "background": "bg-default"
@@ -1672,29 +1660,30 @@
     "components": [
       {
         "TextBox": {},
-        "x": 421,
-        "y": 298,
+        "x": 39,
+        "y": 2,
         "scale": {
           "x": 1,
           "y": 1
         },
         "type": "TextBox",
-        "size": 144,
-        "text": "<div style=\"text-align: center;\"><b style=\"color: rgb(0, 0, 0);\">???</b></div>",
+        "size": 36,
+        "text": "<font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">// in onCreateOptionsMenu(Menu menu) {<br>final ShareActionProvider shareProvider =&nbsp;<br>&nbsp; &nbsp; (ShareActionProvider)<br>&nbsp; &nbsp; </font><font face=\"Droid Sans Mono, monospace\" color=\"#ff0000\">MenuItemCompat.getActionProvider</font><font face=\"Droid Sans Mono, monospace\" color=\"#eeeeee\">(<br>&nbsp; &nbsp; &nbsp; &nbsp; shareMenuItem<br>&nbsp; &nbsp; );<br><br>final Intent shareIntent = <br>&nbsp; &nbsp; new Intent(Intent.ACTION_SEND);<br>shareIntent.setType(\"text/plain\");<br>shareIntent.setFlags(<br>&nbsp;Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET<br>&nbsp;// &gt;= 21&nbsp;</font><font face=\"Droid Sans Mono, monospace\"><font color=\"#ff0000\">FLAG_ACTIVITY_NEW_DOCUMENT</font><br><font color=\"#eeeeee\">);</font><br><font color=\"#eeeeee\">shareIntent.putExtra(Intent.EXTRA_TEXT, </font><br><font color=\"#eeeeee\">&nbsp; &nbsp; getForecastData() + \" #SunshineApp\");</font><br><font color=\"#eeeeee\">shareProvider.setShareIntent(shareIntent);</font></font><br>",
         "selected": false
       }
     ],
-    "z": 7500,
-    "impScale": 30,
+    "z": 0,
+    "impScale": 3,
     "rotateX": 0,
-    "rotateY": -0.96,
+    "rotateY": 0,
     "rotateZ": 0,
-    "index": 39,
-    "selected": false,
+    "index": 37,
+    "selected": true,
     "active": true,
-    "x": 1204,
-    "y": 1458,
-    "background": "bg-default"
+    "surface": "bg-default",
+    "x": 1100,
+    "y": 2100,
+    "background": "bg-solid-black"
   },
   "fileName": "android-studygroup-berlin-3",
   "surface": "bg-default",
