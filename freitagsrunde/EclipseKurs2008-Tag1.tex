@@ -1,0 +1,322 @@
+% add page numbers to each slide
+% mention that these practices and techniques can apply to collaborative working
+% not just limited to coding. You can use these tools to coordinate working on virtually
+% any kind of project - text file,
+
+\documentclass{beamer}
+
+\usepackage{pgf,ngerman,graphicx,hyperref}
+\usepackage[utf8]{inputenc}
+
+\setbeamercovered{transparent}
+\usetheme{Berlin}
+\useinnertheme{rounded}
+
+\title[\insertframenumber]{Eclipsekurs 2008}
+\subtitle{Tag I}
+\author{Thaddäus Krönert, Mario Bodemann}
+\date{8. November 2008}
+
+\begin{document}
+
+\frame{
+\titlepage
+\begin{center}
+TU Berlin
+\end{center}
+}
+
+\section{Vorstellungsrunde}
+
+\frame{
+\frametitle{Die Vortragenden}
+\begin{itemize}
+  \item Thaddäus Krönert
+  \item Mario Bodemann
+  \begin{itemize}
+    \item Fachgebiet: Softwaretechnik und ComputerGrafics
+    \item $\frac{1}{2}$ Eclipse-Maintainer im CS-Netz
+  \end{itemize}
+  \item Robert Buchholz
+  \item Björn Lohrmann
+\end{itemize}
+}
+
+\section{Programm}
+
+\frame{
+\frametitle{Heute: Vortrag und Live-Demo von Thaddäus \& Mario}
+\begin{enumerate}
+  \item Was ist Eclipse?
+  \item Einstieg in Eclipse
+  \item 'Hello World' in 5-Tasten
+  \item Was sehe ich auf meinem Bildschirm?
+  \item Refactoring
+  \item Kleine Helferlein
+\end{enumerate}
+\begin{itemize}
+  \item Rechnertutorien (13:15 - 16:00 Uhr) %TODO 
+  \item TEL 106
+\end{itemize}
+}
+
+\frame{
+\frametitle{Nächste Woche Demo mit Robert \& Björn}
+\begin{enumerate}
+  \item Import/Export
+  \item Käferjagd
+  \item Und sonst so?
+\end{enumerate}
+\begin{itemize}
+  \item Rechnertutorien (13:15 - 16:00 Uhr) % TODO
+  \item TEL 206
+\end{itemize}
+}
+
+\frame{
+\frametitle{Freitagsrunde}
+\begin{center}
+\includegraphics[width=4cm]{images/fr-logo.pdf}
+\end{center}
+\begin{itemize}
+  \item Studentische Vertretung
+  \item Eclipsekurs, Javakurs
+  \item Einführungswoche, Kickertunier, Embedded-Bash
+  \item Jeder kann mitmachen 
+  \item Freitag 13:15 Uhr, FR5046
+\end{itemize}
+}
+
+
+\section{Was ist eclipse?}
+\frame{
+\frametitle{Was ist eclipse?}
+\includegraphics[width=10cm]{images/logo.jpg}
+}
+
+\frame{
+\frametitle{Was ist eclipse?}
+\begin{itemize}
+  \item OpenSource
+  \item Plattformübergreifend (Unix, Windows, Mac)
+  \item IDE in Java für Java (und C/C++, Python \ldots) 
+  \item Editor (Syntax-Highlighting, Code-Vervollständigung)
+  \item Ansichten (Perspektiven, Views)
+  \item Refactorer, Debugger (Siehe nächste Woche)
+  \item Browser (Projekt-Browser, Internet)
+  \item Plugin System
+  \begin{itemize}
+    \item SVN/CVS-Client (Teamwork)
+    \item Chat, MEMO-List und >1500 mehr
+  \end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Plugins}
+\begin{itemize}
+  \item JDT
+  \begin{itemize}
+    \item Java Plugin (Editor, Perspektiven, Debugger)
+    \item Standardmäßig installiert
+    \item Vielbenutzt (akademisch und beruflich)
+    \item \textbf{Schwerpunkt dieses Vortrages}
+  \end{itemize}
+  \item weitere Sprachen:
+  \begin{itemize}
+    \item C, C++ (CDT)
+    \item PHP, HTML
+    \item Python, Perl
+    \item Opal, Haskell
+    \item \LaTeX-Editor (Texlipse im cs-Netz installiert)
+    \item Subclipse: SVN (Nächste Woche)
+\end{itemize}
+}
+
+\section{Aller Anfang ist leicht}
+\frame{
+\frametitle{Die Installation}
+\begin{itemize}
+  \item Im cs-Netz (siehe Beipack-Zettel)
+  \begin{itemize}
+    \item .bashrc im Home verändern
+    \item {\em PATH=/home/pub/lib/eclipse:\$PATH}
+    \item logout und login
+  \end{itemize}
+  \item Zu Hause
+  \begin{itemize}
+    \item Eclipse 3.4 ("`Ganymede"') besorgen % TODO
+    \item \url{download.eclipse.org} oder in den Tutorien nachher
+    \item evtl. JDK installieren\footnote{ \url{http://java.sun.com/javase/downloads/} }
+    \item Auspacken
+    \item Verzeichnis wechseln
+  \end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Der Start}
+\begin{itemize}
+  \item {\em livedemo}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Der Start}
+\begin{itemize}
+  \item {\em eclipse} eingeben
+  \item {\em Workspace} angeben
+  \begin{itemize}
+    \item Arbeitsplatz, für weitere Projekte
+    \item Logische Trennung von Verschiedenen Aufgaben
+    \item zum Beispiel {\em MPGI Aufgaben} und {\em Präsentationen}
+  \end{itemize}
+  \item Was ist ein Projekt?
+  \begin{itemize}
+    \item Sammlung von Ressourcen, die zusammengehören
+    \item zum Beispiel alle Code-Datein, alle Grafiken einer Präsentation
+  \end{itemize}
+  \item Wie lege ich eins an?
+  \begin{itemize}
+  	\item linksklick auf PackageExplorer $\rightarrow$ new $\rightarrow$ JavaProject
+  \end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Es lebt}
+\begin{itemize}
+  \item Entpacken
+  \item Starten von {\em eclipse}
+  \item Anlegen eines {\em Workspaces}
+  \item Erstellen eines {\em Java Projektes}
+  \item Anfügen der ersten {\em Klasse} (mit main)
+  \item Ausgabe eines {\em Strings} (sysout + CTRL + SPACE)
+\end{itemize}
+}
+
+%
+% Daniels Part
+% Fensteranordnung erklären
+% Was erscheint in den verschiedenen Fenstern?
+% Was ist der Package Explorer, Hierarchy und Navigator?
+% Wie ändert man die Fensteranordnung?
+% Wie lasse ich zusätzliche Subfenster anzeigen?
+% Was für Menüpunkte gibt es?
+% Wie kann ich meine Klassen anschauen?
+% Wie kann ich meine Klassen editieren?
+% Wie sehe ich Fehler in meinem Sourcecode?
+% Welche Möglichkeiten zur Fehlerbehebung gibt es?
+% Quickfixes
+% Wie kann ich Java-Konstrukte einfach erstellen (Konstruktoren, Getter, Setter, if-Anweisung, for-Schleife, while-Schleife etc.)?
+% Wie kann man Markierungen setzen (wie zum Beispiel TODO)?
+
+\section{Benutzeroberfläche}
+\frame{
+\frametitle{Grobstruktur}
+Hierarchisch organisiert - von Oben nach Unten:
+\begin{itemize}
+  \item Workbench
+  \item Perspectives
+  \item Editors und Views
+  \item Features
+\end{itemize}
+}
+
+\frame{
+\frametitle{Workbench}
+\begin{itemize}
+  \item Main Menu
+  \begin{itemize}
+    \item Preferences (e.g. Line Numbering, Search Tool, etc)
+    \item Software-Updates (Plugin Functionality)
+  \end{itemize}
+  \item Toolbars
+  \begin{itemize}
+    \item Main Toolbar
+    \item Perspekive Toolbar
+  \end{itemize}
+  \item Multipel Workbenches Möglich
+  \item Sehr flexible Fensteranordnung
+\end{itemize}
+}
+
+\frame{
+\frametitle{Perspektive}
+\begin{itemize}
+  \item Sammlung von Views, Editors, Features
+  \item Taskorientiert:
+  \begin{itemize}
+    \item Java Coding - (Default)
+    \item C/C++ Coding - (mit CDT Plugin)
+    \item Java Debugging
+    \item Code Browsing
+    \item Repository Browsing - (mit CVS oder SVN Plugin)
+    \item und noch Weitere\ldots
+  \end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Java Views}
+\begin{itemize}
+  \item Editor - dazu später mehr
+  \item Navigator - einfacher Ordner
+  \item Package Explorer - Ordner mit Quellcode
+  \begin{itemize} 
+    \item Mehrere Projekte können gleichzeitig im Package Explorer stehen
+  \end{itemize}
+  \item Hierarcy
+  \item Outline
+  \item Problems - Fehler und Warnungen
+\end{itemize}
+}
+
+\frame{
+\frametitle{Weitere Java Views}
+\begin{itemize}
+  \item Javadoc
+  \item Console - Programm Ausgabe
+  \item Problems
+\end{itemize}
+}
+
+\frame{
+\frametitle{Editors}
+Features:
+%Demonstrate Each feature
+  \begin{itemize}
+    \item Auto-compile beim Speichern
+    \item Auto-formatting
+    \item Content-Assist - (ctrl + space)
+    \item Markers - (Warnungen, Fehler, Todos/Tasks) 
+    \item Quick Fixes - (Dreifachklick auf Fehlermarker)
+  \end{itemize}
+}
+
+
+\frame{
+\frametitle{Java Debug Views}
+\begin{itemize}
+  \item Debug View - (Step over, Step into, etc)
+  \item Breakpoints
+  \item Variables
+  \item Mehr dazu nächste Woche
+\end{itemize}
+}
+
+%
+% ENDE
+%
+\section{Ende des ersten Tages}
+\frame{
+\frametitle{Ende}
+\begin{itemize}
+  \item Danke für die Aufmerksamkeit
+  \item Jetzt: Tutorieneinteilung
+\end{itemize}
+}
+
+
+
+\end{document}
