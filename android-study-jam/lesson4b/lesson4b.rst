@@ -320,8 +320,9 @@ use *name* as classname as provider.
 .. code:: java
 
             case WEATHER: 
-                retCursor = mOpenHelper.getReadableDatabase().query(
-                        WeatherEntry.TABLE_NAME, // use table weather
+                retCursor = mOpenHelper.getReadableDatabase().
+                    query(
+                        WeatherEntry.TABLE_NAME, // table
                         projection, // all selected columns
                         selection, // selection
                         selectionArgs, // argument
@@ -342,8 +343,9 @@ use *name* as classname as provider.
 .. code:: java
 
             case LOCATION: 
-                retCursor = mOpenHelper.getReadableDatabase().query(
-                        LocationEntry.TABLE_NAME, // use table weather
+                retCursor = mOpenHelper.getReadableDatabase().
+                    query(
+                        LocationEntry.TABLE_NAME, // table
                         projection, // all columns
                         selection, // selection
                         selectionArgs, // argument
