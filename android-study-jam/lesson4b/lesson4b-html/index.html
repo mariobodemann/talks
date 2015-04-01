@@ -1,0 +1,152 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Android Study Jam, Lesson 4b</title><meta name="generator" content="Hovercraft! 1.0 http://regebro.github.com/hovercraft"></meta><meta name="author" content="Mario Bodemann"></meta><meta name="description" content="Content Provider, Content Resolver"></meta><meta name="keywords" content="android, content, provider, resolver"></meta><link rel="stylesheet" href="css/hovercraft.css" media="all"></link><link rel="stylesheet" href="css/impressConsole.css" media="all"></link><link rel="stylesheet" href="css/highlight.css" media="all"></link><link rel="stylesheet" href="lesson4b.css" media="screen,projection"></link></head><body class="impress-not-supported"><div id="impress"><div class="step" step="0" id="start" data-rotate-y="-60" data-x="0" data-y="0"><div class="main-title"><p>Android Study Jam: Lesson 4b</p></div><div class="main-subtitle"><p>Content Provider and Content Resolver</p></div><img src="images/android_robot_200.png" alt="" width="" height="700"></img></div><div class="step" step="1" data-y="1000" data-rotate-y="0" data-x="0"><h1 id="thanks-to">Thanks to</h1><img src="images/thoughtworks-logo.png" alt="" width="" height=""></img><h1 id="for-this-space">for this space</h1></div><div class="step" step="2" data-x="0" data-y="2000"><h1 id="drinks-toilet">&lt;-- Drinks/Toilet</h1></div><div class="step" step="3" data-x="0" data-y="3000"><h1 id="wifi-password">WiFi password --&gt;</h1></div><div class="step" step="4" data-x="0" data-y="4000"><h1 id="hi-my-name-is-mario-and-who-are-you">Hi, my name is <em>Mario</em>, and who are <em>you</em>?</h1></div><div class="step new-section" step="5" data-rotate-y="0" data-x="1200" data-y="0" data-z="0"><h1 id="lesson-4a">Lesson 4a</h1><h2 id="data">Data</h2></div><div class="step" step="6" data-x="2400" data-y="0"><img src="images/4a-location-table.png" alt="" width="" height=""></img></div><div class="step" step="7" data-x="3600" data-y="0"><img src="images/4a-foreign-key.png" alt="" width="" height=""></img></div><div class="step" step="8" data-x="4800" data-y="0"><h1 id="run-as">./run-as ...</h1><p>Does only work from 4.4.x or pre 4.3.2 due to a bug in android.</p><ol><li>Upgrade Andoid  might help (?)</li><li>use in app share/file saving</li><li>root phone and replace permissions</li></ol><p>see issue <a href="https://code.google.com/p/android/issues/detail?id=58373">58373</a> on android.</p></div><div class="step new-section" step="9" data-x="1200" data-y="1000"><h1 id="lesson-4b">Lesson 4b</h1><h2 id="content-provider">Content Provider</h2></div><div class="step" step="10" data-x="2400" data-y="1000"><h1 id="steps-in-building-a-content-provider">4 Steps in building a content provider</h1><img src="images/content-provider-step-0.png" alt="" width="" height=""></img></div><div class="step" step="11" data-x="3600" data-y="1000"><img src="images/content-provider-step-1.png" alt="" width="" height=""></img></div><div class="step" step="12" data-x="4800" data-y="1000"><img src="images/content-provider-step-2.png" alt="" width="" height=""></img></div><div class="step" step="13" data-x="6000" data-y="1000"><img src="images/content-provider-step-3.png" alt="" width="" height=""></img></div><div class="step" step="14" data-x="7200" data-y="1000"><img src="images/question1.png" alt="" width="" height=""></img></div><div class="step" step="15" data-x="7200" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer1.png" alt="" width="" height=""></img></div><div class="step code-slide" step="16" data-x="7200" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Uri</span> <span class="nf">buildWeatherLocation</span><span class="o">(</span>
+      <span class="n">String</span> <span class="n">locationSetting</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">CONTENT_URI</span><span class="o">.</span><span class="na">buildUpon</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">appendPath</span><span class="o">(</span><span class="n">locationSetting</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+  <span class="c1">// content://com.example.android.sunshine.app/
+</span>  <span class="c1">// &#x21B3; weather/%2FNorth%20Pole
+</span><span class="o">}</span></pre></div><div class="step" step="17" data-x="8400" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question2.png" alt="" width="" height=""></img></div><div class="step" step="18" data-x="8400" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer2.png" alt="" width="" height=""></img></div><div class="step code-slide" step="19" data-x="8400" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="kd">static</span> <span class="n">UriMatcher</span> <span class="nf">buildUriMatcher</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">UriMatcher</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UriMatcher</span><span class="o">(</span>
+            <span class="n">UriMatcher</span><span class="o">.</span><span class="na">NO_MATCH</span><span class="o">);</span>
+
+    <span class="n">result</span><span class="o">.</span><span class="na">addURI</span><span class="o">(</span><span class="n">WeatherContract</span><span class="o">.</span><span class="na">CONTENT_AUTHORITY</span><span class="o">,</span>
+            <span class="n">WeatherContract</span><span class="o">.</span><span class="na">PATH_WEATHER</span><span class="o">,</span>
+            <span class="n">WEATHER</span><span class="o">);</span>
+    <span class="n">result</span><span class="o">.</span><span class="na">addURI</span><span class="o">(</span><span class="n">WeatherContract</span><span class="o">.</span><span class="na">CONTENT_AUTHORITY</span><span class="o">,</span>
+            <span class="n">WeatherContract</span><span class="o">.</span><span class="na">PATH_WEATHER</span> <span class="o">+</span> <span class="s">"/*"</span><span class="o">,</span>
+            <span class="n">WEATHER_WITH_LOCATION</span><span class="o">);</span>
+    <span class="n">result</span><span class="o">.</span><span class="na">addURI</span><span class="o">(</span><span class="n">WeatherContract</span><span class="o">.</span><span class="na">CONTENT_AUTHORITY</span><span class="o">,</span>
+            <span class="n">WeatherContract</span><span class="o">.</span><span class="na">PATH_WEATHER</span> <span class="o">+</span> <span class="s">"/*/#"</span><span class="o">,</span>
+            <span class="n">WEATHER_WITH_LOCATION_AND_DATE</span><span class="o">);</span>
+    <span class="n">result</span><span class="o">.</span><span class="na">addURI</span><span class="o">(</span><span class="n">WeatherContract</span><span class="o">.</span><span class="na">CONTENT_AUTHORITY</span><span class="o">,</span>
+            <span class="n">WeatherContract</span><span class="o">.</span><span class="na">PATH_LOCATION</span><span class="o">,</span>
+            <span class="n">LOCATION</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span></pre></div><div class="step" step="20" data-x="9600" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question3.png" alt="" width="" height=""></img></div><div class="step" step="21" data-x="9600" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer3.png" alt="" width="" height=""></img></div><div class="step" step="22" data-x="9600" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code xml code-slide"> <span class="nt">&lt;provider</span>
+   <span class="na">android:name=</span>
+     <span class="s">".data.WeatherProvider"</span>
+   <span class="na">android:authorities=</span>
+     <span class="s">"com.example.android.sunshine.app"</span>
+ <span class="nt">/&gt;</span></pre><p>if <em>authority</em> requested</p><p>use <em>name</em> as classname as provider.</p></div><div class="step" step="23" data-x="10800" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question4.png" alt="" width="" height=""></img></div><div class="step" step="24" data-x="10800" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer4.png" alt="" width="" height=""></img></div><div class="step code-slide" step="25" data-x="10800" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="o">(</span><span class="n">Uri</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">match</span> <span class="o">=</span> <span class="n">sUriMatcher</span><span class="o">.</span><span class="na">match</span><span class="o">(</span><span class="n">uri</span><span class="o">);</span>
+    <span class="k">switch</span> <span class="o">(</span><span class="n">match</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="n">WEATHER_WITH_LOCATION_AND_DATE</span><span class="o">:</span>
+            <span class="k">return</span> <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">CONTENT_ITEM_TYPE</span><span class="o">;</span>
+        <span class="k">case</span> <span class="n">WEATHER_WITH_LOCATION</span><span class="o">:</span>
+            <span class="k">return</span> <span class="n">LocationEntry</span><span class="o">.</span><span class="na">CONTENT_TYPE</span><span class="o">;</span>
+        <span class="c1">//...
+</span>    <span class="o">}</span>
+<span class="o">}</span></pre></div><div class="step" step="26" data-x="12000" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question5.png" alt="" width="" height=""></img></div><div class="step" step="27" data-x="12000" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer5.png" alt="" width="" height=""></img></div><div class="step code-slide" step="28" data-x="12000" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="k">case</span> <span class="n">WEATHER</span><span class="o">:</span>
+    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span><span class="na">query</span><span class="o">(</span>
+            <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// use table weather
+</span>            <span class="n">projection</span><span class="o">,</span> <span class="c1">// all selected columns
+</span>            <span class="n">selection</span><span class="o">,</span> <span class="c1">// selection
+</span>            <span class="n">selectionArgs</span><span class="o">,</span> <span class="c1">// argument
+</span>            <span class="kc">null</span><span class="o">,</span> <span class="c1">// group by
+</span>            <span class="kc">null</span><span class="o">,</span> <span class="c1">// having
+</span>            <span class="n">sortOrder</span><span class="c1">// orderby
+</span>    <span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span><span class="k">break</span><span class="o">;</span></pre></div><div class="step code-slide" step="29" data-x="12000" data-y="1400" data-z="2600" data-rotate-x="90"><pre class="highlight code java"><span class="k">case</span> <span class="n">LOCATION</span><span class="o">:</span>
+    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span><span class="na">query</span><span class="o">(</span>
+            <span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// use table weather
+</span>            <span class="n">projection</span><span class="o">,</span> <span class="c1">// all columns
+</span>            <span class="n">selection</span><span class="o">,</span> <span class="c1">// selection
+</span>            <span class="n">selectionArgs</span><span class="o">,</span> <span class="c1">// argument
+</span>            <span class="kc">null</span><span class="o">,</span> <span class="c1">// group by
+</span>            <span class="kc">null</span><span class="o">,</span> <span class="c1">// having
+</span>            <span class="n">sortOrder</span> <span class="c1">// orderby
+</span>    <span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span></pre></div><div class="step" step="30" data-x="13200" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question6.png" alt="" width="" height=""></img></div><div class="step" step="31" data-x="13200" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer6.png" alt="" width="" height=""></img></div><div class="step code-slide" step="32" data-x="13200" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="k">case</span> <span class="n">LOCATION</span><span class="o">:</span> <span class="o">{</span>
+    <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span>
+        <span class="kc">null</span><span class="o">,</span> <span class="n">values</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">returnUri</span> <span class="o">=</span> <span class="n">LocationEntry</span><span class="o">.</span><span class="na">buildLocationUri</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">SQLException</span><span class="o">(</span>
+           <span class="s">"Failing insert into row "</span> <span class="o">+</span> <span class="n">uri</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span></pre></div><div class="step" step="33" data-x="14400" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question7.png" alt="" width="" height=""></img></div><div class="step" step="34" data-x="14400" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer7.png" alt="" width="" height=""></img></div><div class="step code-slide" step="35" data-x="14400" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">delete</span><span class="o">(</span><span class="n">Uri</span> <span class="n">uri</span><span class="o">,</span> <span class="n">String</span> <span class="n">selection</span><span class="o">,</span>
+            <span class="n">String</span><span class="o">[]</span> <span class="n">selectionArgs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">SQLiteDatabase</span> <span class="n">db</span> <span class="o">=</span>
+            <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getWritableDatabase</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">match</span> <span class="o">=</span> <span class="n">sUriMatcher</span><span class="o">.</span><span class="na">match</span><span class="o">(</span><span class="n">uri</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">deletedRows</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">TextUtils</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">(</span><span class="n">selection</span><span class="o">))</span> <span class="o">{</span>
+        <span class="n">selection</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+    <span class="o">}</span></pre></div><div class="step code-slide" step="36" data-x="14400" data-y="1400" data-z="2600" data-rotate-x="90"><pre class="highlight code java"><span class="k">switch</span> <span class="o">(</span><span class="n">match</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">WEATHER</span><span class="o">:</span>
+        <span class="n">deletedRows</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span>
+                <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span>
+                <span class="n">selection</span><span class="o">,</span>
+                <span class="n">selectionArgs</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+
+    <span class="k">case</span> <span class="n">LOCATION</span><span class="o">:</span>
+        <span class="n">deletedRows</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span>
+                <span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span>
+                <span class="n">selection</span><span class="o">,</span>
+                <span class="n">selectionArgs</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">UnsupportedOperationException</span><span class="o">();</span>
+<span class="o">}</span></pre></div><div class="step code-slide" step="37" data-x="14400" data-y="1400" data-z="3600" data-rotate-x="90"><pre class="highlight code java">    <span class="k">if</span> <span class="o">(</span><span class="n">deletedRows</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getContext</span><span class="o">().</span><span class="na">getContentResolver</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">notifyChange</span><span class="o">(</span><span class="n">uri</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">deletedRows</span><span class="o">;</span>
+<span class="o">}</span></pre></div><div class="step code-slide" step="38" data-x="14400" data-y="1400" data-z="4600" data-rotate-x="90"><p>Difference between delete and update</p><pre class="highlight code java"><span class="k">switch</span> <span class="o">(</span><span class="n">match</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">WEATHER</span><span class="o">:</span>
+        <span class="n">updatedRows</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="na">update</span><span class="o">(</span>
+                <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span>
+                <span class="n">values</span><span class="o">,</span> <span class="c1">// &lt; update
+</span>                <span class="n">selection</span><span class="o">,</span>
+                <span class="n">selectionArgs</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">LOCATION</span><span class="o">:</span>
+        <span class="n">updatedRows</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="na">update</span><span class="o">(</span>
+                <span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span>
+                <span class="n">values</span><span class="o">,</span> <span class="c1">// &lt; update
+</span>                <span class="n">selection</span><span class="o">,</span>
+                <span class="n">selectionArgs</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">UnsupportedOperationException</span><span class="o">();</span>
+<span class="o">}</span></pre></div><div class="step" step="39" data-x="15600" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question8.png" alt="" width="" height=""></img></div><div class="step" step="40" data-x="15600" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer8.png" alt="" width="" height=""></img></div><div class="step code-slide" step="41" data-x="15600" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="n">Cursor</span> <span class="n">locationCursor</span> <span class="o">=</span> <span class="n">mContext</span>
+  <span class="o">.</span><span class="na">getContentResolver</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">query</span><span class="o">(</span>
+      <span class="n">LocationEntry</span><span class="o">.</span><span class="na">CONTENT_URI</span><span class="o">,</span>
+      <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">LocationEntry</span><span class="o">.</span><span class="na">_ID</span><span class="o">},</span>
+      <span class="n">LocationEntry</span><span class="o">.</span><span class="na">COLUMN_LOCATION_SETTING</span> <span class="o">+</span> <span class="s">" = ?"</span><span class="o">,</span>
+      <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">locationSetting</span><span class="o">},</span>
+      <span class="kc">null</span><span class="o">);</span></pre></div><div class="step code-slide" step="42" data-x="15600" data-y="1400" data-z="2600" data-rotate-x="90"><pre class="highlight code java"><span class="k">if</span> <span class="o">(</span><span class="n">locationCursor</span><span class="o">.</span><span class="na">moveToFirst</span><span class="o">())</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">locationIdIndex</span> <span class="o">=</span> <span class="n">locationCursor</span>
+    <span class="o">.</span><span class="na">getColumnIndex</span><span class="o">(</span><span class="n">LocationEntry</span><span class="o">.</span><span class="na">_ID</span><span class="o">);</span>
+  <span class="n">locationId</span> <span class="o">=</span> <span class="n">locationCursor</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="n">locationIdIndex</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span></pre></div><div class="step code-slide" step="43" data-x="15600" data-y="1400" data-z="3600" data-rotate-x="90"><pre class="highlight code java">  <span class="n">ContentValues</span> <span class="n">locationValues</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ContentValues</span><span class="o">();</span>
+
+  <span class="n">locationValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">LocationEntry</span><span class="o">.</span><span class="na">COLUMN_CITY_NAME</span><span class="o">,</span>
+    <span class="n">cityName</span><span class="o">);</span>
+  <span class="n">locationValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">LocationEntry</span><span class="o">.</span>
+    <span class="n">COLUMN_LOCATION_SETTING</span><span class="o">,</span>
+    <span class="n">locationSetting</span><span class="o">);</span>
+  <span class="c1">/// .,.
+</span>
+  <span class="n">Uri</span> <span class="n">insertedUri</span> <span class="o">=</span> <span class="n">mContext</span><span class="o">.</span><span class="na">getContentResolver</span><span class="o">().</span>
+    <span class="n">insert</span><span class="o">(</span>
+      <span class="n">WeatherContract</span><span class="o">.</span><span class="na">LocationEntry</span><span class="o">.</span><span class="na">CONTENT_URI</span><span class="o">,</span>
+      <span class="n">locationValues</span><span class="o">);</span>
+
+  <span class="n">locationId</span> <span class="o">=</span> <span class="n">ContentUris</span><span class="o">.</span><span class="na">parseId</span><span class="o">(</span><span class="n">insertedUri</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">locationId</span><span class="o">;</span></pre></div><div class="step" step="44" data-x="16800" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question9.png" alt="" width="" height=""></img></div><div class="step" step="45" data-x="16800" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer9.png" alt="" width="" height=""></img></div><div class="step code-slide" step="46" data-x="16800" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="k">if</span> <span class="o">(</span> <span class="n">cVVector</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">)</span> <span class="o">{</span>
+  <span class="n">ContentValues</span><span class="o">[]</span> <span class="n">cvArray</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="n">ContentValues</span><span class="o">[</span><span class="n">cVVector</span><span class="o">.</span><span class="na">size</span><span class="o">()];</span>
+  <span class="n">cVVector</span><span class="o">.</span><span class="na">toArray</span><span class="o">(</span><span class="n">cvArray</span><span class="o">);</span>
+  <span class="n">mContext</span><span class="o">.</span><span class="na">getContentResolver</span><span class="o">().</span>
+    <span class="n">bulkInsert</span><span class="o">(</span>
+      <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">CONTENT_URI</span><span class="o">,</span>
+      <span class="n">cvArray</span><span class="o">);</span>
+<span class="o">}</span></pre></div><div class="step" step="47" data-x="18000" data-y="1000" data-z="1500" data-rotate-y="75" data-rotate-x="0"><h1 id="done">Done.</h1><h2 id="questions">Questions???</h2></div></div><div id="hovercraft-help"><table><tr><th>Space</th><td>Forward</td></tr><tr><th>Left, Down, Page Down</th><td>Next slide</td></tr><tr><th>Right, Up, Page Up</th><td>Previous slide</td></tr><tr><th>P</th><td>Open presenter console</td></tr><tr><th>H</th><td>Toggle this help</td></tr></table></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/impressConsole.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
