@@ -37,8 +37,9 @@
         <span class="c1">//...
 </span>    <span class="o">}</span>
 <span class="o">}</span></pre></div><div class="step" step="26" data-x="12000" data-y="1000" data-z="0" data-rotate-x="0"><img src="images/question5.png" alt="" width="" height=""></img></div><div class="step" step="27" data-x="12000" data-y="1400" data-z="600" data-rotate-x="90"><img src="images/answer5.png" alt="" width="" height=""></img></div><div class="step code-slide" step="28" data-x="12000" data-y="1400" data-z="1600" data-rotate-x="90"><pre class="highlight code java"><span class="k">case</span> <span class="n">WEATHER</span><span class="o">:</span>
-    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span><span class="na">query</span><span class="o">(</span>
-            <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// use table weather
+    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span>
+        <span class="n">query</span><span class="o">(</span>
+            <span class="n">WeatherEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// table
 </span>            <span class="n">projection</span><span class="o">,</span> <span class="c1">// all selected columns
 </span>            <span class="n">selection</span><span class="o">,</span> <span class="c1">// selection
 </span>            <span class="n">selectionArgs</span><span class="o">,</span> <span class="c1">// argument
@@ -47,8 +48,9 @@
 </span>            <span class="n">sortOrder</span><span class="c1">// orderby
 </span>    <span class="o">);</span>
     <span class="k">break</span><span class="o">;</span><span class="k">break</span><span class="o">;</span></pre></div><div class="step code-slide" step="29" data-x="12000" data-y="1400" data-z="2600" data-rotate-x="90"><pre class="highlight code java"><span class="k">case</span> <span class="n">LOCATION</span><span class="o">:</span>
-    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span><span class="na">query</span><span class="o">(</span>
-            <span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// use table weather
+    <span class="n">retCursor</span> <span class="o">=</span> <span class="n">mOpenHelper</span><span class="o">.</span><span class="na">getReadableDatabase</span><span class="o">().</span>
+        <span class="n">query</span><span class="o">(</span>
+            <span class="n">LocationEntry</span><span class="o">.</span><span class="na">TABLE_NAME</span><span class="o">,</span> <span class="c1">// table
 </span>            <span class="n">projection</span><span class="o">,</span> <span class="c1">// all columns
 </span>            <span class="n">selection</span><span class="o">,</span> <span class="c1">// selection
 </span>            <span class="n">selectionArgs</span><span class="o">,</span> <span class="c1">// argument
