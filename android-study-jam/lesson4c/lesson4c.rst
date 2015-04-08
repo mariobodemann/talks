@@ -19,12 +19,9 @@
 .. image:: images/android_robot_200.png
    :height: 700
 
-.. note::
-   do we speak english or german?
-
 ----
 
-:data-x: r2000
+:data-x: r1600
 :data-rotate-y: 0
 
 Thanks to 
@@ -40,9 +37,6 @@ for this space
 <-- Drinks/Toilet
 =================
 
-.. note::
-   Please donate something per drink.
-
 ----
 
 WiFi password -->
@@ -52,9 +46,6 @@ WiFi password -->
 
 Hi, my name is *Mario*, and who are *you*?
 ==========================================
-
-.. note::
-   Please keep it short, and if we are already familiar, ignore.
 
 
 ----
@@ -70,7 +61,7 @@ Content Provider
 ----
 
 :data-x: r0
-:data-y: r2000
+:data-y: r1000
 
 4 Steps in building a content provider
 ======================================
@@ -101,51 +92,27 @@ Loader
 
 ----
 
-:data-x: r-2000
+:data-x: r-1400
 :data-y: r0
 
 .. image:: images/01-question.png
 
-.. note::
-   ask audience
-
 ----
 
 .. image:: images/01-answer.png
-
-.. note:: 
-   similar to first lessons: binding ui to background is bad
 
 ----
 
 .. image:: images/plan-of-action.png
    :width: 1000px
 
-.. note::
-   read data from provider
-
-   change **ForecastAdapter** from **ArrayAdapter** to **CursorAdapter**
-
-   move ui related code to Utility, and out of the *task*
-
-   **Problem**: *Query* will be executed on UI thread, see above
-
 ----
 
 .. image:: images/02-question.png
 
-.. note:: 
-   Leaving out checkmark slides
-
 ----
 
 :class: code-slide
-
-.. note::
-
-   Fragment!
-
-   LOADER_ID can be "anything" but unique per LoaderManager.
 
 .. code:: java
     
@@ -164,6 +131,7 @@ Loader
         super.onActivityCreated(savedInstanceState);
         getActivity().getLoaderManager().initLoader(
             LOADER_WEATHER_ID, null, this);
+    }
     }
 
 ----
@@ -215,17 +183,9 @@ Loader
 
 .. image:: images/03-question.png
 
-.. note::
-   Ignoring check mark question, again
-
 ----
 
 :class: code-slide
-
-.. note::
-   This and next code comes from WeatherContract
-   
-   I just put it into **WeatherContract**. It might also live in ForecastFragment, but I wanted to keep it central ...
 
 .. code:: java
 
@@ -277,9 +237,6 @@ Loader
 
 :class: code-slide
 
-.. note::
-   and now: Just use them also in the ui class
-
 .. code:: java
 
     public String convertCursorRowToUXFormat(Cursor cursor) {
@@ -296,18 +253,11 @@ Loader
 
 ----
 
-.. note::
-   We just got some code to display the url in the details, so use
-   this url to make another loader request, to update the data.
-
 .. image:: images/04-question.png
 
 ----
 
 :class: code-slide
-
-.. note::
-   Remember to check the cursor and move it to first element! Also check livecycle of action provider.
 
 .. code:: java
 
@@ -323,6 +273,7 @@ Loader
                 LoaderIds.LOADER_DETAIL_WEATHER_ID, 
                 null, 
                 this);
+    }
     }
 
 ----
@@ -345,11 +296,6 @@ Loader
 ----
 
 :class: code-slide
-
-.. note::
-   **updateShareIntent** updates the member action providers share intent to the new data.
-  
-   also: I reused the **convertCursorRowToUxFormat** method
 
 .. code:: java
 
@@ -376,9 +322,6 @@ Loader
 ----
 
 .. image:: images/05-answer.jpg
-
-.. note::
-   Found through doc search: http://developer.android.com/reference/android/provider/MediaStore.Audio.Media.html
 
 ----
 
