@@ -4,7 +4,10 @@
 
 ----
 
-:data-rotate-y: -60
+:data-x: 0
+:data-y: 0
+:data-z: 0
+:data-rotate-y: 0
 
 .. container:: main-title
 
@@ -12,15 +15,17 @@
 
 .. container:: main-subtitle
 
-  Content Loader
+  Rich and Responsive Layouts
 
 .. image:: images/android_robot_200.png
    :height: 700
 
 ----
 
-:data-x: r1600
-:data-rotate-y: 0
+:data-x: 800
+:data-y: r200
+:data-z: -1000
+:data-rotate-y: 72
 
 Thanks to 
 =========
@@ -32,21 +37,40 @@ for this space
 
 ----
 
+:data-x: 400
+:data-y: r200
+:data-z: -1400
+:data-rotate-y: 144
+
 <-- Drinks/Toilet
 =================
 
 ----
+
+:data-x: -400
+:data-y: r200
+:data-z: -1400
+:data-rotate-y: 216
 
 WiFi password -->
 =================
 
 ----
 
+:data-x: -800
+:data-y: r200
+:data-z: -1000
+:data-rotate-y: 288
+
 Hi, my name is *Mario*, and who are *you*?
 ==========================================
 
 ----
 
+:data-rotate-y: 359
+:data-x: 0
+:data-y: 1200
+:data-z: 0
 :class: new-section
 
 Lesson 4
@@ -57,6 +81,53 @@ Database, Content Provider, Resolver and Loader
 
 ----
 
+:data-x: r1400
+:data-y: r0
+:data-z: r0
+:data-rotate-y: 360
+
+Summary
+=======
+
+.. image:: images/lesson4-summary.png
+   :width: 1000px
+
+----
+
+Sqlite
+======
+
+.. image:: images/lesson4-databases.jpg  
+
+----
+
+Provider
+========
+
+.. image:: images/lesson4-content-provider-step-0.png  
+
+----
+
+.. image:: images/lesson4-content-provider-step-2.png  
+
+----
+
+.. image:: images/lesson4-content-provider-step-1.png  
+
+----
+
+.. image:: images/lesson4-content-provider-step-3.png  
+
+----
+
+Loader
+======
+
+.. image:: images/lesson4-loader.png
+
+----
+
+:data-rotate-y: 0
 :class: new-section
 
 Lesson 5
