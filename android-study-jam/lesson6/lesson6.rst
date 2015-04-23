@@ -67,7 +67,7 @@ Hi, my name is *Mario*, and who are *you*?
 
 ----
 
-:data-rotate-y: 359
+:data-rotate-y: 359.9
 :data-x: 0
 :data-y: 1200
 :data-z: 0
@@ -81,8 +81,18 @@ Rich and Responsive Layouts
 
 ----
 
-:data-rotate-y: 0
 :data-x: r1600
+
+.. image:: images/lesson5-start.png
+  :height: 700px
+
+----
+
+.. image:: images/lesson5-end.png
+  :height: 700px
+
+----
+
 :class: new-section
 
 Lesson 6
@@ -94,6 +104,10 @@ Services and Notifications
 ----
 
 .. image:: images/01-question.jpg 
+
+----
+
+.. image:: images/01-answer.jpg 
 
 ----
 
