@@ -1,4 +1,4 @@
-:title: Android Study Jam, Lesson 6: Services and Notifications
+:title: Android Development for Beginners - lesson 1
 :author: Mario Bodemann
 :css: lesson.css
 
@@ -7,56 +7,76 @@
 :data-x: 0
 :data-y: 0
 :data-z: 0
-:data-rotate-y: 0
 
 .. container:: main-title
 
-  Android Beginners recap - lesson 1
+  Android Development for Beginners
 
-.. image:: images/octobear.png
+.. container:: main-subtitle
+
+  Lesson 1: the begining
+
+.. image:: images/octobear2x.png
    :height: 700
 
 ----
 
-:data-x: 800
-:data-y: r200
-:data-z: -1000
-:data-rotate-y: 72
+:data-x: 40
+:data-y: 100
+:data-z: 50
+:data-scale: .15
+:data-rotate-x: -35
 
 Thanks to 
 =========
 
 .. image:: images/thoughtworks-logo.png
 
+
 for this space
-==============
+--------------
+
+and Udacity_ 
+============
+
+for the lessons
+---------------
+
+.. _Udacity: https://www.udacity.com/course/android-development-for-beginners--ud837
 
 ----
 
-:data-x: 400
-:data-y: r200
-:data-z: -1400
-:data-rotate-y: 144
+:class: new-section
+
+:data-x: 279
+:data-y: 0
+:data-z: 25
+:data-scale: .02
+:data-rotate-x: 0
+
+
+What? How?
+==========
+
+What will this course be about and how do we organize it?
+---------------------------------------------------------
+
+----
+
+:data-x: r40
+:data-y: 0
 
 ← Drinks/Toilet
 ===============
 
 ----
 
-:data-x: -400
-:data-y: r200
-:data-z: -1400
-:data-rotate-y: 216
 
 WiFi password →
 ===============
 
 ----
 
-:data-x: -800
-:data-y: r200
-:data-z: -1000
-:data-rotate-y: 288
 
 Hi, my name is *Mario*, and who are *you*?
 ==========================================
@@ -92,12 +112,6 @@ Hi, my name is *Mario*, and who are *you*?
 
 ----
 
-:data-x: r0
-:data-y: r0
-:data-z: 3000
-:data-rotate-x: 30
-:data-rotate-y: 75
-:data-rotate-z: 30
 :class: new-section
 
 **Done. YOU ARE GREAT**
