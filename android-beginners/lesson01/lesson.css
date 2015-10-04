@@ -18,7 +18,7 @@ body {
     font-size: 200%;
     text-align: center;
     font-family: Lato;
-
+    
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
@@ -73,8 +73,13 @@ a {
 }
 
 .step {
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 1em;
     width: 1024px;
+}
+
+.transparent-slide {
+    background-color: transparent;
 }
 
 .code-slide {
@@ -84,7 +89,7 @@ a {
 }
 
 .new-section {
-    background-color: rgb(189, 35, 68);
+    background-color: rgba(189, 35, 68, 0.5);
     width:1024px
     height:768px
 }
@@ -96,8 +101,7 @@ div.main-title > p {
   width: 600px;
   text-align: left;
   font-size: 40pt;
-  
-}
+} 
 
 div.main-subtitle > p {
   position: absolute;
@@ -105,4 +109,13 @@ div.main-subtitle > p {
   left: 0px;
   width: 600px;
   text-align: left;
+}
+
+div.main-name > p {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 600px;
+  text-align: left;
+  font-size: 18pt;
 }
