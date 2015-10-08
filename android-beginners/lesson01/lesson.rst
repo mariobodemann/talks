@@ -82,7 +82,7 @@ Where?
 
   * ←  
  
-  * Please donate 1 € per drink
+  * Please donate 1 € per drink in the brown cup
 
 
 * Toilets 
@@ -107,10 +107,10 @@ What?
   * 4 weeks with ca. 6h per week
 
 
-Android Development for Beginners @ Udacity
-
-.. image:: images/qr.png
-    :width: 300
+* Android Development for Beginners @ Udacity
+ 
+  * Link to https://www.udacity.com/course/android-development-for-beginners--ud837 
+  * These slides http://j.mp/artab01
 
 ----
 
@@ -118,12 +118,13 @@ How?
 ====
 
 * Everyweek: New chapter, new Video_
-* Starting at 8, lasting till roughly 11
+* Starting at 8 pm, lasting till roughly 11pm
   
   * Recap on last lesson
-  * ask questions, meet other learners
-  * time for free hacking on android ...
-
+  * Ask questions, meet other learners
+  * Time for free hacking on android ...
+  * Not neccesary the best place to whatch the videos
+  * After Recap: Open Round of questions
 
 .. _Video: https://www.udacity.com/course/android-development-for-beginners--ud837
 
@@ -217,6 +218,8 @@ Views
 
 ----
 
+http://labs.udacity.com/android-visualizer/
+
 .. image:: ./images/06-first-xml.png
 
 ----
@@ -265,8 +268,6 @@ Correct xml
 ----
 
 .. image:: ./images/09-solution-font-size.png
-
-try android:textAppearance="?android:textAppearanceLarge" 
 
 ----
 
