@@ -1,0 +1,241 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Android Development for Beginners - lesson 1B: Building Layouts</title><meta name="generator" content="Hovercraft! 1.0 http://regebro.github.com/hovercraft"></meta><meta name="author" content="Mario Bodemann"></meta><link rel="stylesheet" href="css/hovercraft.css" media="all"></link><link rel="stylesheet" href="css/impressConsole.css" media="all"></link><link rel="stylesheet" href="css/highlight.css" media="all"></link><link rel="stylesheet" href="lesson.css" media="screen,projection"></link></head><body class="impress-not-supported"><div id="impress"><div class="step" step="0" data-x="0" data-y="0" data-z="0"><div class="main-title"><p>Android Development for Beginners</p></div><div class="main-subtitle"><p>Lesson 1B: Building Layouts</p></div><div class="main-name"><p>Mario Bodemann @ GDG Android Berlin</p></div><img src="images/octobear.png" alt="" width="" height="700"></img></div><div class="step" step="1" data-x="30" data-y="100" data-z="50" data-scale=".14" data-rotate-x="-26"><h1 id="thanks-to">Thanks to</h1><img src="images/thoughtworks-logo.png" alt="" width="" height=""></img><h2 id="for-this-space">for this space</h2><h1 id="and-udacity">and <a href="https://www.udacity.com/course/android-development-for-beginners--ud837">Udacity</a></h1><h2 id="for-the-lessons">for the lessons</h2></div><div class="step new-section" step="2" data-x="279" data-y="0" data-z="25" data-scale=".02" data-rotate-x="0"><h1 id="where">Where?</h1><h1 id="what">What?</h1><h1 id="how">How?</h1></div><div class="step" step="3" data-x="309" data-y="0" data-z="25" data-scale=".02"><h1 id="id1">Where?</h1><ul><li>Drinks<ul><li>&#x2190;</li><li>Please donate 1 &#x20AC; per drink in the brown cup</li></ul></li><li>Toilets<ul><li>&#x2190;</li></ul></li><li>WiFi<ul><li>SSID: werkstatt &#x2192; PWD: d1srupt1ve</li><li>(Shared, please be nice!)</li></ul></li></ul></div><div class="step" step="4" data-x="339" data-y="0" data-z="25" data-scale=".02"><h1 id="id2">What?</h1><ul><li>Learning to write Android Apps<ul><li>No prior programming knowledge needed</li><li>Laptop with Internet, from next week Android Studio installed</li><li>4 weeks with ca. 6h per week</li></ul></li><li>Android Development for Beginners @ Udacity<ul><li>Link to <a href="https://www.udacity.com/course/android-development-for-beginners--ud837">https://www.udacity.com/course/android-development-for-beginners--ud837</a></li><li>These slides <a href="http://j.mp/artab01">http://j.mp/artab01</a></li></ul></li></ul></div><div class="step" step="5" data-x="369" data-y="0" data-z="25" data-scale=".02"><h1 id="id3">How?</h1><ul><li>Everyweek: New chapter, new <a href="https://www.udacity.com/course/android-development-for-beginners--ud837">Video</a></li><li>Starting at 8 pm, lasting till roughly 11pm<ul><li>Recap on last lesson</li><li>Ask questions, meet other learners</li><li>Time for free hacking on android ...</li><li>Not neccesary the best place to whatch the videos</li><li>After Recap: Open Round of questions</li></ul></li></ul></div><div class="step" step="6" data-x="399" data-y="0" data-z="25" data-scale=".02"><h1 id="your-questions">Your questions?</h1></div><div class="step transparent-slide" step="7" data-x="0" data-y="0" data-z="0" data-scale="1"></div><div class="step new-section" step="8" data-x="-319" data-y="-57" data-z="25" data-scale=".02"><h1 id="repetiton">Repetiton</h1></div><div class="step" step="9" data-x="-309" data-y="-37" data-z="25" data-scale=".02"><img src="./images/repetetition.png" alt="" width="" height=""></img></div><div class="step new-section" step="10" data-x="-299" data-y="-17" data-z="25" data-scale=".02"><h1 id="viewgroups">ViewGroups</h1></div><div class="step" step="11" data-x="-289" data-y="3" data-z="25" data-scale=".02"><img src="./images/01-view-groups.png" alt="" width="" height=""></img></div><div class="step" step="12" data-x="-279" data-y="23" data-z="25" data-scale=".02"><img src="./images/01-solution-view-groups.png" alt="" width="" height=""></img></div><div class="step" step="13" data-x="-269" data-y="43" data-z="25" data-scale=".02"><img src="./images/02-parent-xml.png" alt="" width="" height=""></img></div><div class="step code-slide" step="14" data-x="-259" data-y="63" data-z="25" data-scale=".02"><p><a href="https://gist.github.com/anonymous/cd7fda2fa5c4062acb92">https://gist.github.com/anonymous/cd7fda2fa5c4062acb92</a></p><pre class="highlight code xml"><span class="nt">&lt;LinearLayout</span>
+  <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+  <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+  <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"Guest List"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"Kunal"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></pre></div><div class="step" step="15" data-x="-249" data-y="83" data-z="25" data-scale=".02"><img src="./images/03-experiments.png" alt="" width="" height=""></img><p><a href="http://labs.udacity.com/android-visualizer/#/android/linear-layout">http://labs.udacity.com/android-visualizer/#/android/linear-layout</a></p></div><div class="step" step="16" data-x="-239" data-y="103" data-z="25" data-scale=".02"><img src="./images/04-match_parent.png" alt="" width="" height=""></img><p><a href="http://labs.udacity.com/android-visualizer/#/android/match-parent">http://labs.udacity.com/android-visualizer/#/android/match-parent</a></p></div><div class="step" step="17" data-x="-229" data-y="123" data-z="25" data-scale=".02"><img src="./images/05-layout_weight.png" alt="" width="" height=""></img></div><div class="step" step="18" data-x="-219" data-y="143" data-z="25" data-scale=".02"><img src="./images/06-ocean-view.png" alt="" width="" height=""></img><p><a href="http://labs.udacity.com/android-visualizer/#/android/linear-layout-weight">http://labs.udacity.com/android-visualizer/#/android/linear-layout-weight</a></p></div><div class="step code-slide-tiny" step="19" data-x="-209" data-y="163" data-z="25" data-scale=".02"><p><a href="https://gist.github.com/anonymous/cd7fda2fa5c4062acb92">https://gist.github.com/anonymous/cd7fda2fa5c4062acb92</a></p><pre class="highlight code xml"><span class="nt">&lt;LinearLayout</span>
+  <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+  <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+  <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+  <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;ImageView</span>
+      <span class="na">android:src=</span><span class="s">"@drawable/ocean"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"0dp"</span>
+      <span class="na">android:layout_weight=</span><span class="s">"1"</span>
+      <span class="na">android:scaleType=</span><span class="s">"centerCrop"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"You're invited!"</span>
+      <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:textColor=</span><span class="s">"@android:color/white"</span>
+      <span class="na">android:textSize=</span><span class="s">"54sp"</span>
+      <span class="na">android:layout_weight=</span><span class="s">"0"</span>
+      <span class="na">android:background=</span><span class="s">"#009688"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"Bonfire at the beach"</span>
+      <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:textColor=</span><span class="s">"@android:color/white"</span>
+      <span class="na">android:textSize=</span><span class="s">"34sp"</span>
+      <span class="na">android:layout_weight=</span><span class="s">"0"</span>
+      <span class="na">android:background=</span><span class="s">"#009688"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></pre></div><div class="step" step="20" data-x="-199" data-y="183" data-z="25" data-scale=".02"><img src="./images/07-where-am-i.png" alt="" width="" height=""></img></div><div class="step code-slide-tiny" step="21" data-x="-189" data-y="203" data-z="25" data-scale=".02"><p><a href="https://gist.github.com/anonymous/e7eb5ceff9dedfc376eb">https://gist.github.com/anonymous/e7eb5ceff9dedfc376eb</a></p><pre class="highlight code xml"><span class="nt">&lt;RelativeLayout</span>
+     <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+     <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+     <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+     <span class="na">android:padding=</span><span class="s">"16dp"</span><span class="nt">&gt;</span>
+
+ <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"I&#x2019;m in this corner"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentBottom=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentLeft=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"No, up here"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentTop=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentLeft=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"Wait, I&#x2019;m here"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentBottom=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentRight=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:text=</span><span class="s">"Actually, I&#x2019;m here"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentTop=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentRight=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/RelativeLayout&gt;</span></pre></div><div class="step" step="22" data-x="-199" data-y="223" data-z="25" data-scale=".02"><img src="./images/07-where-am-i.png" alt="" width="" height=""></img></div><div class="step" step="23" data-x="-229" data-y="236" data-z="25" data-scale=".02"><p><a href="http://labs.udacity.com/android-visualizer/#/android/relative-layout-view-ids">http://labs.udacity.com/android-visualizer/#/android/relative-layout-view-ids</a></p><img src="./images/08-seating.png" alt="" width="" height=""></img></div><div class="step code-slide-tiny" step="24" data-x="-259" data-y="249" data-z="25" data-scale=".02"><pre class="highlight code xml"><span class="nt">&lt;RelativeLayout</span>
+  <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+  <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+  <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/lyla_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentBottom=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentLeft=</span><span class="s">"true"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Lyla"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/me_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentBottom=</span><span class="s">"true"</span>
+      <span class="na">android:layout_toRightOf=</span><span class="s">"@id/lyla_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Me"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/natalie_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_above=</span><span class="s">"@id/lyla_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Natalie"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/jennie_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentBottom=</span><span class="s">"true"</span>
+      <span class="na">android:layout_alignParentRight=</span><span class="s">"true"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Jennie"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/omoju_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentRight=</span><span class="s">"true"</span>
+      <span class="na">android:layout_above=</span><span class="s">"@id/jennie_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Omoju"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/amy_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentRight=</span><span class="s">"true"</span>
+      <span class="na">android:layout_above=</span><span class="s">"@id/omoju_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Amy"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/ben_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentTop=</span><span class="s">"true"</span>
+      <span class="na">android:layout_centerHorizontal=</span><span class="s">"true"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Ben"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/kunal_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentTop=</span><span class="s">"true"</span>
+      <span class="na">android:layout_toLeftOf=</span><span class="s">"@id/ben_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Kunal"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;TextView</span>
+      <span class="na">android:id=</span><span class="s">"@+id/kagure_text_view"</span>
+      <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+      <span class="na">android:layout_alignParentTop=</span><span class="s">"true"</span>
+      <span class="na">android:layout_toRightOf=</span><span class="s">"@id/ben_text_view"</span>
+      <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+      <span class="na">android:text=</span><span class="s">"Kagure"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/RelativeLayout&gt;</span></pre></div><div class="step" step="25" data-x="-289" data-y="249" data-z="25" data-scale=".02"><p><a href="http://labs.udacity.com/android-visualizer/#/android/relative-layout-list-item">http://labs.udacity.com/android-visualizer/#/android/relative-layout-list-item</a></p><img src="./images/09-item-view.png" alt="" width="" height=""></img></div><div class="step code-slide-tiny" step="26" data-x="-319" data-y="239" data-z="25" data-scale=".02"><pre class="highlight code xml"><span class="nt">&lt;RelativeLayout</span>
+   <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+   <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+   <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+   <span class="nt">&gt;</span>
+
+   <span class="nt">&lt;ImageView</span>
+       <span class="na">android:id=</span><span class="s">"@+id/image"</span>
+       <span class="na">android:layout_width=</span><span class="s">"56dp"</span>
+       <span class="na">android:layout_height=</span><span class="s">"56dp"</span>
+       <span class="na">android:scaleType=</span><span class="s">"centerCrop"</span>
+       <span class="na">android:src=</span><span class="s">"@drawable/ocean"</span> <span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;TextView</span>
+       <span class="na">android:id=</span><span class="s">"@+id/name"</span>
+       <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:text=</span><span class="s">"Pebble Beach"</span>
+       <span class="na">android:layout_toRightOf=</span><span class="s">"@id/image"</span>
+       <span class="na">android:textAppearance=</span><span class="s">"?android:textAppearanceMedium"</span> <span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;TextView</span>
+       <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:id=</span><span class="s">"@+id/place"</span>
+       <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:text=</span><span class="s">"California"</span>
+       <span class="na">android:layout_toRightOf=</span><span class="s">"@id/image"</span>
+       <span class="na">android:layout_below=</span><span class="s">"@id/name"</span>
+       <span class="na">android:textAppearance=</span><span class="s">"?android:textAppearanceSmall"</span> <span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;TextView</span>
+       <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:layout_toRightOf=</span><span class="s">"@id/image"</span>
+       <span class="na">android:layout_below=</span><span class="s">"@id/place"</span>
+       <span class="na">android:text=</span><span class="s">"10 miles away"</span>
+       <span class="na">android:textAppearance=</span><span class="s">"?android:textAppearanceSmall"</span> <span class="nt">/&gt;</span>
+
+ <span class="nt">&lt;/RelativeLayout&gt;</span></pre></div><div class="step" step="27" data-x="-349" data-y="229" data-z="25" data-scale=".02"><p><a href="http://labs.udacity.com/android-visualizer/#/android/padding-and-margin">http://labs.udacity.com/android-visualizer/#/android/padding-and-margin</a></p><img src="./images/10-padding-margin.png" alt="" width="" height=""></img></div><div class="step code-slide-tiny" step="28" data-x="-379" data-y="219" data-z="25" data-scale=".02"><pre class="highlight code xml"><span class="nt">&lt;LinearLayout</span>
+   <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+   <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+   <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+   <span class="na">android:orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;</span>
+
+   <span class="nt">&lt;ImageView</span>
+       <span class="na">android:src=</span><span class="s">"@drawable/ocean"</span>
+       <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+       <span class="na">android:layout_height=</span><span class="s">"0dp"</span>
+       <span class="na">android:layout_weight=</span><span class="s">"1"</span>
+       <span class="na">android:scaleType=</span><span class="s">"centerCrop"</span> <span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;TextView</span>
+       <span class="na">android:text=</span><span class="s">"You're invited!"</span>
+       <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+       <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:textColor=</span><span class="s">"@android:color/white"</span>
+       <span class="na">android:textSize=</span><span class="s">"45sp"</span>
+       <span class="na">android:paddingTop=</span><span class="s">"16dp"</span>
+       <span class="na">android:paddingLeft=</span><span class="s">"16dp"</span>
+       <span class="na">android:paddingBottom=</span><span class="s">"8dp"</span>
+       <span class="na">android:paddingRight=</span><span class="s">"16dp"</span>
+       <span class="na">android:background=</span><span class="s">"#009688"</span><span class="nt">/&gt;</span>
+
+   <span class="nt">&lt;TextView</span>
+       <span class="na">android:text=</span><span class="s">"Bonfire at the beach"</span>
+       <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+       <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+       <span class="na">android:textColor=</span><span class="s">"@android:color/white"</span>
+       <span class="na">android:textSize=</span><span class="s">"24sp"</span>
+       <span class="na">android:paddingLeft=</span><span class="s">"16dp"</span>
+       <span class="na">android:paddingBottom=</span><span class="s">"16dp"</span>
+       <span class="na">android:paddingRight=</span><span class="s">"16dp"</span>
+       <span class="na">android:background=</span><span class="s">"#009688"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/LinearLayout&gt;</span></pre></div><div class="step" step="29" data-x="-379" data-y="199" data-z="25" data-scale=".02"><img src="./images/fin.png" alt="" width="" height=""></img><p>... but wait ...</p></div><div class="step" step="30" data-x="-379" data-y="179" data-z="25" data-scale=".02"><h1 id="have-you-installed-the-jdk">Have you installed the JDK?</h1><p>Please follow <a href="https://www.udacity.com/course/viewer#!/c-ud837/l-4034888704/m-4182118788">https://www.udacity.com/course/viewer#!/c-ud837/l-4034888704/m-4182118788</a>
+to do so &#x2026;</p></div><div class="step" step="31" data-x="-379" data-y="159" data-z="25" data-scale=".02"><h1 id="what-about-android-studio">What about Android Studio?</h1><p><a href="https://www.udacity.com/course/viewer#!/c-ud837/l-4034888704/m-4300158589">https://www.udacity.com/course/viewer#!/c-ud837/l-4034888704/m-4300158589</a></p></div><div class="step" step="32" data-x="-379" data-y="159" data-z="25" data-rotate-x="-90" data-scale=".02"><h1 id="coffee-break-anyone">Coffee Break anyone?</h1></div><div class="step" step="33" data-z="100" data-x="-379" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-01.png" alt="" width="" height=""></img></div><div class="step" step="34" data-z="125" data-x="-379" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-01.png" alt="" width="" height=""></img><h1 id="answer-imageview">Answer: ImageView</h1></div><div class="step transparent-slide" step="35" data-z="150" data-x="-379" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-02.png" alt="" width="" height=""></img></div><div class="step" step="36" data-x="-339" data-z="175" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-02.png" alt="" width="" height=""></img><h1 id="answer-attributes">Answer: Attributes</h1></div><div class="step" step="37" data-x="-379" data-z="200" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-03.png" alt="" width="" height=""></img></div><div class="step" step="38" data-x="-379" data-z="225" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-04.png" alt="" width="" height=""></img></div><div class="step" step="39" data-z="250" data-x="-379" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-05.png" alt="" width="" height=""></img></div><div class="step" step="40" data-z="275" data-x="-379" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-06.png" alt="" width="" height=""></img></div><div class="step" step="41" data-x="-339" data-z="275" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-06.png" alt="" width="" height=""></img><p>Katherine and Kunal</p></div><div class="step" step="42" data-x="-379" data-z="300" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-07.png" alt="" width="" height=""></img></div><div class="step" step="43" data-x="-339" data-z="300" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-07.png" alt="" width="" height=""></img><p>layout_weight="1" on line 21</p></div><div class="step" step="44" data-x="-379" data-z="325" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-08.png" alt="" width="" height=""></img></div><div class="step" step="45" data-x="-379" data-z="350" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-09.png" alt="" width="" height=""></img></div><div class="step" step="46" data-x="-339" data-z="350" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-09.png" alt="" width="" height=""></img><p>android:layout_alignParentBottom="true"</p><p>android:layout_centerHorizontal="true"</p></div><div class="step" step="47" data-x="-379" data-z="375" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-10.png" alt="" width="" height=""></img></div><div class="step" step="48" data-x="-379" data-z="400" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-10.png" alt="" width="" height=""></img><p>100dp</p></div><div class="step" step="49" data-x="-379" data-z="500" data-y="159" data-rotate-x="-90" data-scale=".02"><img src="./images/coffee-fin.png" alt="" width="" height=""></img></div><div class="step" step="50" data-x="-379" data-z="500" data-rotate-x="0" data-y="159" data-scale=".02"><img src="./images/coffee-fin.png" alt="" width="" height=""></img><p>Kagure</p></div></div><div id="hovercraft-help"><table><tr><th>Space</th><td>Forward</td></tr><tr><th>Left, Down, Page Down</th><td>Next slide</td></tr><tr><th>Right, Up, Page Up</th><td>Previous slide</td></tr><tr><th>P</th><td>Open presenter console</td></tr><tr><th>H</th><td>Toggle this help</td></tr></table></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/impressConsole.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
