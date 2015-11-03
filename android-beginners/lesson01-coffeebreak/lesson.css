@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@font-face {
+    font-family: 'Droid Sans Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Droid Sans Mono'), local('Droid-Sans-Mono'), url(fonts/Droid-Sans-Mono.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/Lato-Regular.woff) format('woff');
+}
+
+body {
+    font-size: 200%;
+    text-align: center;
+    font-family: Lato;
+    
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));  
+}
+
+p {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    text-align: left;
+}
+
+pre {
+    text-align: left;
+    font-family: Droid Sans Mono
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+tt {
+    font-size: 125;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    padding-left: 0.3em;
+    line-height: 1.8em;
+    text-align: left;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.step {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1em;
+    width: 1300px;
+}
+
+.transparent-slide {
+    background-color: transparent;
+}
+
+.code-slide {
+    font-family: Droid Sans Mono;
+    background-color: white;
+    padding: 0.5em
+}
+
+.code-slide-tiny {
+    font-family: Droid Sans Mono;
+    font-size: 12pt;
+    background-color: white;
+    padding: 0.5em
+}
+
+.new-section {
+    background-color: rgba(189, 35, 68, 0.5);
+    width:1300px
+    height:768px
+}
+
+div.main-title > p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 600px;
+  text-align: left;
+  font-size: 40pt;
+} 
+
+div.main-subtitle > p {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  width: 600px;
+  text-align: left;
+}
+
+div.main-name > p {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 600px;
+  text-align: left;
+  font-size: 18pt;
+}
+
+img {
+  width: 85%;
+}
