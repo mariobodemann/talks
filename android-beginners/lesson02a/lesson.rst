@@ -1,6 +1,6 @@
 :title: Android Development for Beginners - lesson 2a: interaction
 :author: Mario Bodemann
-:css: ../lesson.css
+:css: lesson.css
 
 ----
 
