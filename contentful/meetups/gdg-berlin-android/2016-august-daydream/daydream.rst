@@ -46,32 +46,36 @@
 ----
 
 .. image:: images/cardboard.png
+   :class: center-image
    :width: 1000px 
 
 ----
 
-This is a text
+Google Cardboard
+----------------
 
-* Bullet Point
-* Bullet Point 
-* `Bullet Point <www.blah.de>`_
+* Easy to produce
+* Available from different companies
+* In different styles/interactions
+* `You just need a phone`.
 
-.. image:: images/cardboard.png
-   :width: 10%
+.. image:: images/cardboard-viewer.jpg
+  :class: bottom-right 
+  :width: 30%
 
 ----
 
 .. image:: images/daydream.png
-  :width: 1000px
+   :class: center-image
 
 ----
 
-:data-x: r0
-:data-y: r0
-:data-z: 3000
+:data-x: -2000
+:data-y: 3000
+:data-z: 2000
 :data-rotate-x: 0
-:data-rotate-y: 75
-:data-rotate-z: 0
+:data-rotate-y: -60
+:data-rotate-z: 90
 :class: last-slide
 
 Thank you

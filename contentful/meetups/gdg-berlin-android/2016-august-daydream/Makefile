@@ -16,6 +16,6 @@ debug : $(RSTS)
 clean:
 	rm -rf $(HTMLS)
 	
-slides: 
-	deck2pdf --profile=impressjs *-html/index.html slides.pdf
+slides: all
+	decktape "${PWD}/*-html/index.html" "${PWD}/slides.pdf"
 

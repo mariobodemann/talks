@@ -96,10 +96,10 @@ a::after {
 }
 
 .last-slide {
-    background-color: rgba(164, 196, 57,0.4);
+    background-color: rgba(164, 196, 57,0.8);
     height: auto;
     padding: auto;
-    top: -200px;
+    left: 600px;
 }
 
 div.main-title > p {
@@ -138,3 +138,17 @@ div.main-speaker > p {
   top: -75%
 }
 
+.center-image {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.bottom-right {
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  z-index: -1;
+}
