@@ -11,7 +11,7 @@ debug : $(RSTS)
 	watch -n 2 hovercraft $^
 
 %-html: %.rst
-	hovercraft $^ $@
+	hovercraft -t ../../../../talk-template $^ $@
 
 clean:
 	rm -rf $(HTMLS)
