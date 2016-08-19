@@ -65,10 +65,51 @@ Google Cardboard
 
 ----
 
+How does Cardboard work?
+------------------------
+
+* Use 3D data and movement to draw two images
+
+  * one for the left and right eye each.
+
+* Distort images for the lenses.
+* Brain combines image to 3D scene.
+
+----
+
+How do you program for it?
+--------------------------
+
+SDKs available for 
+
+* Android (*OpenGL*)
+* IOS (*Objective C*)
+* Web (*JS*)
+* Unity Engine (C# /JS)
+
+----
+
+What can I only do in Android?
+------------------------------
+
+----
+
 .. image:: images/daydream.png
    :class: center-image
 
 ----
+
+How does it differ from Cardboard?
+----------------------------------
+
+* Same basis, SDK, etc.
+* New
+
+  * Controller!
+  * Certification!
+  * Noughat
+
+-----
 
 :data-x: -2000
 :data-y: 3000
