@@ -80,7 +80,7 @@ a::after {
     padding: 1em;
     width: 1300px;
     height: 700px;
-    background-color: rgba(255,255,255, 0.85);
+    background-color: white;
 }
 
 .code-slide {
@@ -96,7 +96,7 @@ a::after {
 }
 
 .last-slide {
-    background-color: rgba(164, 196, 57,0.8);
+    background-color: rgb(164, 196, 57);
     height: auto;
     padding: auto;
     left: 600px;
@@ -107,7 +107,7 @@ div.main-title > p {
   width: 100%;
   text-align: center;
   font-size: 80pt;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
 }
 
 div.main-subtitle > p {
@@ -118,7 +118,7 @@ div.main-subtitle > p {
   padding: 2%;
   font-size: 42pt;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
 }
 
 div.main-speaker > p {

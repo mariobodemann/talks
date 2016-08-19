@@ -32,7 +32,7 @@
 
 ----
 
-:data-x: r2000
+:data-x: r1700
 
 
 * 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
@@ -57,7 +57,7 @@ Google Cardboard
 * Easy to produce
 * Available from different companies
 * In different styles/interactions
-* `You just need a phone`.
+* *You just need a phone.*
 
 .. image:: images/cardboard-viewer.jpg
   :class: bottom-right 
