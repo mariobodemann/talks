@@ -85,12 +85,37 @@ SDKs available for
 * Android (*OpenGL*)
 * IOS (*Objective C*)
 * Web (*JS*)
-* Unity Engine (C# /JS)
+* Unity Engine (*C# /JS*)
 
 ----
 
+What do they have in common?
+----------------------------
+
+* Panorama
+* 3D Scene setup (l/r eye)
+* Lens distortion correction
+
+  * Scanning of qrcode (?)
+
 What can I only do in Android?
 ------------------------------
+
+* VrPanoramaView (?)
+* VrVideoView
+* Hassle free integration with other Java libs.
+
+  * DUDE
+
+----
+
+How do I write a Unity App?
+---------------------------
+
+----
+
+Demo
+====
 
 ----
 
@@ -107,7 +132,7 @@ How does it differ from Cardboard?
 
   * Controller!
   * Certification!
-  * Noughat
+  * Noughat!
 
 -----
 
