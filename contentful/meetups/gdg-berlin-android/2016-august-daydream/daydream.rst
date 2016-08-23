@@ -61,7 +61,6 @@ Google Cardboard
 
 .. image:: images/cardboard-viewer.jpg
   :class: bottom-right 
-  :width: 30%
 
 ----
 
@@ -82,40 +81,58 @@ How do you program for it?
 
 SDKs available for 
 
-* Android (*OpenGL*)
-* IOS (*Objective C*)
-* Web (*JS*)
-* Unity Engine (*C# /JS*)
-
-----
-
-What do they have in common?
-----------------------------
-
-* Panorama
-* 3D Scene setup (l/r eye)
-* Lens distortion correction
-
-  * Scanning of qrcode (?)
-
-What can I only do in Android?
-------------------------------
-
-* VrPanoramaView (?)
-* VrVideoView
-* Hassle free integration with other Java libs.
-
-  * DUDE
+* Android (OpenGL)
+* IOS (Objective C)
+* Web (JS)
+* Unity Engine (C# /JS)
 
 ----
 
 How do I write a Unity App?
 ---------------------------
 
+Aka demo time!
+==============
+
+.. image:: images/unity-editor-icon.png
+
+
+.. note::
+
+        * Clone googles github: https://github.com/googlevr/gvr-unity-sdk
+        * Open Unity.
+        * Add GameObject Plane(Rescale 10x10x10), Cube, Sphere, Cylinder, move/rotate(top gizmo) them around.
+        * Download(?) a material from asset store, to assign to all models: Move Material to right hand object pool.
+        * Assign rigid body (aka gravity) (Component/Physics/Rigid).
+        * Duplicate some object to increase dynamic of scene. Play Scene.
+        * Import the Unity package by going to Assets > Import Package > Custom Package.
+        * Apply Camera by going to Assets/GoogleVR/Prefabs and move the GvrViewerMain onto the camera.
+        * Play Scene. (Mention building it for Android and provide it later on)
+
+        **Installing Unity on linux**
+
+        * http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/
+        * chmod a+x \*installer\*.sh; sudo \*installer\*.sh
+
 ----
 
-Demo
-====
+What else can I with those SDKs?
+--------------------------------
+
+* Panorama
+* 3D Scene setup (left/right eye)
+* Lensdistortion correction
+
+  * Scanning of qrcode (?)
+
+----
+
+What can I only do in Android?
+------------------------------
+
+* VrPanoramaView
+* VrVideoView
+* integration with other (Java) libraries
 
 ----
 
