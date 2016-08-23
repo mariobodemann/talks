@@ -17,13 +17,13 @@ div#console {
 
 div#views {
     float: left;
-    width: 16em;
-    margin-right: 1em;
+    width: 100%;
+    height: 60%;
 }
 
 div#blocker {
-    width: 17em;
-    height: 20em;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,8 +32,11 @@ div#blocker {
 
 div#notes {
     overflow-x: hidden;
-    overflow-y: auto;
-    height: 95%;
+    overflow-y: visible;
+    width: 100%;
+    height: auto;
+    padding-top: 1em;
+    background-color: yellow;
 }
 
 div#notes p {
@@ -41,14 +44,17 @@ div#notes p {
 }
 
 iframe#slideView {
-    width: 16em;
-    height: 12em;
+    width: 55%;
+    height: 100%;
+    border: 5px solid red;
 }
 
 iframe#preView {
-    width: 8em;
-    height: 6em;
-}
+    width: 40%;
+    height: 70%;
+    border: 5px dotted green;
+    margin-right: 2%;
+    margin-left: 1%;}
 
 div#controls {
     margin: 0;
