@@ -8,6 +8,7 @@ html#impressconsole {
     font-family: verdana, arial, sans-serif;
     font-size: 26px;
     height: 92%;
+    background-color: darkgray;
 }
 
 div#console {
