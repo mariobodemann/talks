@@ -98,7 +98,7 @@ Aka demo time!
 
 
 .. note::
-
+        
         * Clone googles github: https://github.com/googlevr/gvr-unity-sdk
         * Open Unity.
         * Add GameObject Plane(Rescale 10x10x10), Cube, Sphere, Cylinder, move/rotate(top gizmo) them around.
@@ -116,30 +116,73 @@ Aka demo time!
 
 ----
 
-What else can I with those SDKs?
---------------------------------
+What do those SDKs provide?
+---------------------------
 
-* Panorama
-* 3D Scene setup (left/right eye)
+* 3D setup (left/right eye translation and rendering)
 * Lensdistortion correction
+* Adoption of cardboard movement to scene
+* Panorama of 360 degree Photospheres (more later)
 
-  * Scanning of qrcode (?)
+----
+
+What can I do in pure Android only?
+-----------------------------------
+
+* VrPanoramaView/VrVideoView
+
+  * Integration of photospheres in view hierarchies.
+
+* Integration with other (Java) libraries.
+* Sending Intents easily.
 
 ----
 
-What can I only do in Android?
-------------------------------
+Limitations of Android SDK
+--------------------------
 
-* VrPanoramaView
-* VrVideoView
-* integration with other (Java) libraries
+* Rendering of 3D scene has to be done by
+
+  * either low level OpenGL or 
+  * 3rd party 3d engine
+
+* Setup of ``Google VR`` libraries
+
+  * Own Android Studio Project for all ``.aar`` files needed
 
 ----
+
+Adding a Photosphere to an simple project
+-----------------------------------------
+
+* Demo
+* How to add a Photosphere view to your hierarchy
+
+.. image:: images/nougat_2x.png
+   :class: bottom-right
+
+.. note::
+
+        * Open Android Studio.
+        * Open ``Simple Android List View`` project.
+        * Show current status in Resource preview.
+        * Point out all dependencies are already added. (think about adding them)
+        * Use VrPanoramaView in xml
+        * Use VrPanoramaView in java (adapter)
+        * set image from resources.
+
+----
+
+:data-x: 0
+:data-y: 1000
+
 
 .. image:: images/daydream.png
    :class: center-image
 
 ----
+
+:data-x: r1700
 
 How does it differ from Cardboard?
 ----------------------------------
@@ -153,8 +196,8 @@ How does it differ from Cardboard?
 
 -----
 
-:data-x: -2000
-:data-y: 3000
+:data-x: -1700
+:data-y: 1900
 :data-z: 2000
 :data-rotate-x: 0
 :data-rotate-y: -60
