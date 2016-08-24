@@ -48,6 +48,7 @@ h1, h2, h3, h4 {
 
 tt {
     font-size: 125;
+    background-color: lightgray;
 }
 
 ul {
@@ -87,6 +88,10 @@ a::after {
     font-family: Droid Sans Mono;
     background-color: white;
     padding: 0.5em
+}
+
+.hide-background {
+	background-color: transparent;
 }
 
 .new-section {

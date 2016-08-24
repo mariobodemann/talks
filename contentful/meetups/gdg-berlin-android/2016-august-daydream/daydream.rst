@@ -29,19 +29,26 @@
 
   Virtual Reality in Android
 
+.. note::
+
+        Do you want to ask the audience level? (``Android Pro/Medium/Beginner + VR Done'it/Knowsaboutit/new``)
 
 ----
 
 :data-x: r1700
 
 
-* 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
-
 .. image:: images/contentful.png
-   :width: 500
+   :width: 500px
 
+* 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 * 📄: `bit.ly/mbcbrd <http://bit.ly/mbcbrd>`_
+
+.. note::
+
+        * Please follow the slides at the given address.
+        * Wait some seconds to see if someone is writing down the address...
 
 ----
 
@@ -49,14 +56,15 @@
    :class: center-image
    :width: 1000px 
 
+
 ----
 
 Google Cardboard
 ----------------
 
-* Easy to produce
-* Available from different companies
-* In different styles/interactions
+* Easy to produce,
+* available from different companies,
+* in different styles/interactions,
 * *You just need a phone.*
 
 .. image:: images/cardboard-viewer.jpg
@@ -67,11 +75,11 @@ Google Cardboard
 How does Cardboard work?
 ------------------------
 
-* Use 3D data and movement to draw two images
+* Use 3D data and movement to draw two images,
 
-  * one for the left and right eye each.
+  * one for the left and right eye.
 
-* Distort images for the lenses.
+* Contains Lenses to move things away.
 * Brain combines image to 3D scene.
 
 ----
@@ -81,18 +89,18 @@ How do you program for it?
 
 SDKs available for 
 
-* Android (OpenGL)
-* IOS (Objective C)
-* Web (JS)
-* Unity Engine (C# /JS)
+* Android (OpenGL),
+* IOS (Objective C),
+* Web (JS),
+* Unity Engine (C# /JS) x (🍎, G,💻, 🐧).
 
 ----
 
 How do I write a Unity App?
 ---------------------------
 
-Aka demo time!
-==============
+Demo time!
+==========
 
 .. image:: images/unity-editor-icon.png
 
@@ -112,51 +120,60 @@ Aka demo time!
         **Installing Unity on linux**
 
         * http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/
-        * chmod a+x \*installer\*.sh; sudo \*installer\*.sh
 
 ----
 
 What do those SDKs provide?
 ---------------------------
 
-* 3D setup (left/right eye translation and rendering)
-* Lensdistortion correction
-* Adoption of cardboard movement to scene
-* Panorama of 360 degree Photospheres (more later)
+* Lens distortion correction.
+* Spatial audio.
+* Head tracking.
+* 3D calibration.
+* Side-by-side rendering.
+
+----
+
+What else do they provide?
+--------------------------
+
+* Stereo geometry configuration.
+* User input event handling.
+* See `developer.google.com/vr/android/ <https://developers.google.com/vr/android/>`_
 
 ----
 
 What can I do in pure Android only?
 -----------------------------------
 
-* VrPanoramaView/VrVideoView
+* ``VrPanoramaView``/``VrVideoView``
 
   * Integration of photospheres in view hierarchies.
 
 * Integration with other (Java) libraries.
-* Sending Intents easily.
+* Sending of Intents easily.
 
 ----
 
 Limitations of Android SDK
 --------------------------
 
-* Rendering of 3D scene has to be done by
+* Using 3D models has to be done by
 
   * either low level OpenGL or 
-  * 3rd party 3d engine
+  * 3rd party 3d engine.
 
 * Setup of ``Google VR`` libraries
 
-  * Own Android Studio Project for all ``.aar`` files needed
+  * one module for each ``.aar`` dependency needed.
 
 ----
 
-Adding a Photosphere to an simple project
------------------------------------------
+Adding Photospheres to a simple project
+---------------------------------------
 
 * Demo
-* How to add a Photosphere view to your hierarchy
+* How to add a Photosphere view to your view hierarchy.
 
 .. image:: images/nougat_2x.png
    :class: bottom-right
@@ -165,36 +182,124 @@ Adding a Photosphere to an simple project
 
         * Open Android Studio.
         * Open ``Simple Android List View`` project.
-        * Show current status in Resource preview.
-        * Point out all dependencies are already added. (think about adding them)
-        * Use VrPanoramaView in xml
+        * Show current status in ``Vysor``.
+        * Add three dependencies by hand: ``Common, CommonWidget, PanoWidget (Sources/Others/gvr-android-sdk/libraries)``
+        * Use VrPanoramaView in xml, increasing the ``height`` of view.
         * Use VrPanoramaView in java (adapter)
-        * set image from resources.
+        * Load image from resources. (``VrPanoramaView.load``, ``BitmapFactory.decoderesource)``
 
 ----
 
 :data-x: 0
 :data-y: 1000
 
-
-.. image:: images/daydream.png
+.. image:: images/daydream-logo.png
    :class: center-image
+   :width: 1000px
+
+.. note::
+
+        * Introduced at Google I/O this year.
+        * Soon™ first hardware available.
+
+----
+
+:class: hide-background
+:data-x: r1700
+
+.. image:: images/daydream-headset.png
+   :height: 800px
+
+Google IO 2016 `General <https://youtu.be/rOCaujUOCuE>`_ `Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
+
+
+----
+
+:class: hide-background
+:data-x: r190
+:data-y: r240
+:data-z: r-800
+
+.. note::
+
+        Controller
+
+        * Uses special hardware as controller.
+
+                * Can get emulated by any Android phone (>= 4.4).
+                * Has four Buttons: Volume +/-, App(Programmable), Home.
+                * Clickable Touchpad. (x/y position, clicked state)(Emulated by two touches)
+
+        * Print out sheet to not get to disctracted by Phone
+        * Connects via bluetooth to ``Headset Phone``.
+
+----
+
+:class: hide-background
+:data-x: r-400
+:data-y: r-12
+:data-z: r100
+
+.. note::
+
+        Headset Phone
+
+        * Has to be a ``Nexus 6p`` running ``Android Nougat 7.0``.
+        * Start a Daydream app once, set it up by clicking on the ``Gear``, enabling all VR settings.
+        * ``Reboot phone ...`` ;) .
+        * Bluetooth to connect to Controller.
+
+----
+
+:class: hide-background
+:data-x: r210
+:data-y: r-228
+:data-z: r700
+
+
+.. note::
+
+        Complete Package
+
+        * ``Daydream Ready``
+
+                * High performance sensors for high accuracy head tracking.
+                * Displays with fast response time to minimize blur.
+                * Powerfull mobile processor.
+                * VR System notifications.
+
+        * Will be available ``in fall``.
+        * Will be created by hardware partners.
+        * Certified by ``Google``.
+        * Google Play for VR and ``Daydream Home``
 
 ----
 
 :data-x: r1700
+:data-y: r0
+:data-z: r0
 
-How does it differ from Cardboard?
-----------------------------------
+New SDK features
+----------------
 
-* Same basis, SDK, etc.
-* New
+* Controlling the controller
 
-  * Controller!
-  * Certification!
-  * Noughat!
+  * Orientation/Acceleration 
+  * Clickpad
+  * Buttons
 
------
+* Spatial Audio Engine
+
+----
+
+Deprecation & Deletion
+----------------------
+
+* ``Deprecation of v1 Cardboards`` 😱
+* Deprecation of Cardboard Button infavor of Controller
+* Renaming ``Cardboard*`` to ``Gvr*``
+
+----
 
 :data-x: -1700
 :data-y: 1900

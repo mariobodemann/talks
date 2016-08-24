@@ -17,5 +17,5 @@ clean:
 	rm -rf $(HTMLS)
 	
 slides: all
-	decktape "${PWD}/*-html/index.html" "${PWD}/slides.pdf"
+	decktape -s 1920x1080 "${PWD}/*-html/index.html" "${PWD}/slides.pdf"
 
