@@ -66,11 +66,18 @@ li {
 
 a {
     color: black;
+    text-shadow:
+     -3px  0px 2px white,  
+      3px  0px 2px white,  
+      0px -3px 2px white,  
+      0px  3px 2px white,  
+      3px -3px 2px white,
+     -3px  3px 2px white,
+      3px  3px 2px white
 }
 
 a::after {
     content: "🔖";
-    color: grey;
 }
 
 .hidden {
@@ -144,11 +151,10 @@ div.main-speaker > p {
 }
 
 .center-image {
-    position: absolute;
+    position: relative;
     top: 5%;
-    left: 5%;
-    width: 90%;
     height: 90%;
+    width: auto;
 }
 
 .bottom-right {
