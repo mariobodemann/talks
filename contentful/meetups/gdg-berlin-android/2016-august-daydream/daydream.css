@@ -18,6 +18,7 @@ body {
     font-size: 300%;
     text-align: center;
     font-family: Lato;
+    color: #282b34;
 
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(190, 190, 190)));
@@ -65,15 +66,12 @@ li {
 }
 
 a {
-    color: black;
+    color: #282b34;
+    text-decoration: none;
     text-shadow:
-     -3px  0px 2px white,  
-      3px  0px 2px white,  
-      0px -3px 2px white,  
-      0px  3px 2px white,  
-      3px -3px 2px white,
-     -3px  3px 2px white,
-      3px  3px 2px white
+      0px -20px 10px #65bbe7,  
+     -20px  0px 10px #f3e705,  
+      0px  20px 10px #f03e48;  
 }
 
 a::after {

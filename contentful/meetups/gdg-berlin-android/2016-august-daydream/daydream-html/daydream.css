@@ -18,6 +18,7 @@ body {
     font-size: 300%;
     text-align: center;
     font-family: Lato;
+    color: #282b34;
 
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(190, 190, 190)));
@@ -65,12 +66,16 @@ li {
 }
 
 a {
-    color: black;
+    color: #282b34;
+    text-decoration: none;
+    text-shadow:
+      0px -20px 10px #65bbe7,  
+     -20px  0px 10px #f3e705,  
+      0px  20px 10px #f03e48;  
 }
 
 a::after {
     content: "🔖";
-    color: grey;
 }
 
 .hidden {
@@ -144,11 +149,10 @@ div.main-speaker > p {
 }
 
 .center-image {
-    position: absolute;
+    position: relative;
     top: 5%;
-    left: 5%;
-    width: 90%;
     height: 90%;
+    width: auto;
 }
 
 .bottom-right {
