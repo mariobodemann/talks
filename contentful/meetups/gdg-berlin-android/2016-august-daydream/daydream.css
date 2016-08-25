@@ -69,9 +69,9 @@ a {
     color: #282b34;
     text-decoration: none;
     text-shadow:
-      0px -20px 10px #65bbe7,  
-     -20px  0px 10px #f3e705,  
-      0px  20px 10px #f03e48;  
+      0px -5px 10px #65bbe7,  
+     -5px  0px 10px #f3e705,  
+      0px  6px 10px #f03e48;  
 }
 
 a::after {

@@ -45,7 +45,7 @@
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 * 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrberlin>`_
 
-  * Please interrupt.
+  * Please interrupt!
 
 .. note::
 
@@ -69,10 +69,10 @@
 Google Cardboard
 ----------------
 
-* Easy to produce,
-* available from different companies,
-* in different styles/interactions,
-* *You just need a phone.*
+* easy to produce
+* available from different companies
+* in different styles/interactions
+* *You just need a phone™*
 
 .. image:: images/cardboard-viewer.jpg
   :class: bottom-right 
@@ -90,12 +90,12 @@ Google Cardboard
 How does Cardboard work?
 ------------------------
 
-* Use 3D data and movement to draw two images,
+* use 3D data and movement to draw two images
 
-  * one for the left and right eye.
+  * one for the left and right eye
 
-* Contains Lenses to move things away.
-* Brain combines image to 3D scene.
+* contains Lenses to move things away
+* brain combines image to 3D scene
 
 ----
 
@@ -109,9 +109,9 @@ How do you program for it?
 
 Googles SDK are available for
 
-* Android (OpenGL),
-* IOS (Objective C),
-* Unity Engine (C# /JS) x (🍎, G,💻, 🐧).
+* Android (OpenGL)
+* IOS (Objective C)
+* Unity Engine (C# /JS) x (🍎, G,💻, 🐧)
 
 ----
 
@@ -145,20 +145,20 @@ Demo time!
 What do those SDKs provide?
 ---------------------------
 
-* Lens distortion correction.
-* Spatial audio.
-* Head tracking.
-* 3D calibration.
-* Side-by-side rendering.
+* lens distortion correction
+* spatial audio
+* head tracking
+* 3D calibration
+* side-by-side rendering
 
 ----
 
 What else do they provide?
 --------------------------
 
-* Stereo geometry configuration.
-* User input event handling.
-* See `developer.google.com/vr/android/ <https://developers.google.com/vr/android/>`_
+* stereo geometry configuration
+* user input event handling
+* see `developer.google.com/vr/android/ <https://developers.google.com/vr/android/>`_
 
 ----
 
@@ -167,28 +167,27 @@ What can I do in pure Android only?
 
 * ``VrPanoramaView``/``VrVideoView``
 
-  * Integration of photospheres in view hierarchies.
+  * integration of photospheres in view hierarchies
 
-* Integration with other (Java) libraries.
-* Sending of Intents easily.
+* integration with other (Java) libraries
+* sending of Intents easily
 
 ----
 
 Limitations of Android SDK
 --------------------------
 
-* Using 3D models has to be done by
+* using 3D models has to be done by
 
   * either low level OpenGL or 
-  * 3rd party 3d engine.
+  * 3rd party 3d engine
 
 ----
 
 Adding Photospheres to a simple project
 ---------------------------------------
 
-* Demo
-* How to add a Photosphere view to your view hierarchy.
+* demo
 
 .. image:: images/nougat_2x.png
    :class: bottom-right
@@ -227,8 +226,6 @@ Adding Photospheres to a simple project
 .. image:: images/daydream-headset.png
    :height: 800px
 
-
-
 ----
 
 :class: hide-background
@@ -240,14 +237,14 @@ Adding Photospheres to a simple project
 
         Controller
 
-        * Uses special hardware as controller.
+        * uses special hardware as controller
 
-                * Can get emulated by any Android phone (>= 4.4).
-                * Has four Buttons: Volume +/-, App(Programmable), Home.
-                * Clickable Touchpad. (x/y position, clicked state)(Emulated by two touches)
+                * can get emulated by any Android phone (>= 4.4)
+                * has four Buttons: Volume +/-, App(Programmable), Home
+                * clickable Touchpad. (x/y position, clicked state)(emulated by two touches)
 
         * Print out sheet to not get to disctracted by Phone
-        * Connects via bluetooth to ``Headset Phone``.
+        * Connects via bluetooth to ``Headset Phone``
 
 ----
 
@@ -260,10 +257,10 @@ Adding Photospheres to a simple project
 
         Headset Phone
 
-        * Has to be a ``Nexus 6p`` running ``Android Nougat 7.0``.
-        * Start a Daydream app once, set it up by clicking on the ``Gear``, enabling all VR settings.
+        * has to be a ``Nexus 6P`` running ``Android Nougat 7.0``
+        * start a Daydream app once, set it up by clicking on the ``Gear``, enabling all VR settings
         * ``Reboot phone ...`` ;) .
-        * Bluetooth to connect to Controller.
+        * Bluetooth to connect to controller.
 
 ----
 
@@ -279,14 +276,14 @@ Adding Photospheres to a simple project
 
         * ``Daydream Ready``
 
-                * High performance sensors for high accuracy head tracking.
-                * Displays with fast response time to minimize blur.
-                * Powerfull mobile processor.
-                * VR System notifications.
+                * high performance sensors for high accuracy head tracking
+                * displays with fast response time to minimize blur
+                * powerfull mobile processor
+                * VR System notifications
 
-        * Will be available ``in fall``.
-        * Will be created by hardware partners.
-        * Certified by ``Google``.
+        * will be available ``in fall``
+        * will be created by hardware partners
+        * certified by ``Google``
         * Google Play for VR and ``Daydream Home``
 
 ----
@@ -300,23 +297,23 @@ New SDK features
 
 * Controlling the controller
 
-  * Orientation/Acceleration 
-  * Clickpad (x,y, clicked)
-  * Buttons (App, Vol+/-)
+  * orientation/acceleration 
+  * clickpad (x,y, clicked)
+  * buttons (App, Vol+/-)
 
-* Spatial Audio Engine
+* spatial audio engine
 
 ----
 
 Deprecation & Deletion
 ----------------------
 
-* ``Deprecation of v1.0 Cardboards`` 😱
+* ``deprecation of v1.0 Cardboards`` 😱
 
-  * Magnets are uncool!
-  * Deprecation of Cardboard button infavor of Controller
+  * magnets are uncool!
+  * deprecation of cardboard button infavor of controller
 
-* Renaming ``Cardboard*`` to ``Gvr*``
+* renaming ``Cardboard*`` packages to ``Gvr*``
 
 ----
 
@@ -331,4 +328,6 @@ Deprecation & Deletion
 What would you build?
 
 * `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
-* `Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
+* `📄 Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
+* `🐦@MarioBodemann <http://twitter.com/@MarioBodemann>`_
+
