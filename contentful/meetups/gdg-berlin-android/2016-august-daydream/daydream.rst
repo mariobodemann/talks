@@ -19,7 +19,7 @@
 .. container:: scolling-background
 
   .. image:: images/scrolling-background.jpg
-   :width: 20000px
+   :width: 21000px
 
 .. container:: main-title
 
@@ -43,7 +43,7 @@
 
 * 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
-* 📄: `bit.ly/mbcbrd <http://bit.ly/mbcbrd>`_
+* 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrberlin>`_
 
 .. note::
 
@@ -52,12 +52,17 @@
 
 ----
 
+:data-x: 0
+:data-y: r1000
+
 .. image:: images/cardboard.png
    :class: center-image
    :width: 1000px 
 
-
 ----
+
+:data-x: r1700
+:data-y: r0
 
 Google Cardboard
 ----------------
@@ -72,6 +77,14 @@ Google Cardboard
 
 ----
 
+.. image:: images/cardboard-woa.jpg
+   :class: center-image
+   :width: 1000px 
+
+`🐦 @themightyjon using Cardboard <https://twitter.com/MarioBodemann/status/708665949663195140>`_
+
+----
+
 How does Cardboard work?
 ------------------------
 
@@ -81,6 +94,11 @@ How does Cardboard work?
 
 * Contains Lenses to move things away.
 * Brain combines image to 3D scene.
+
+----
+
+.. image:: images/contentful-vr-bunny.gif
+   :class: center-image
 
 ----
 
@@ -163,10 +181,6 @@ Limitations of Android SDK
   * either low level OpenGL or 
   * 3rd party 3d engine.
 
-* Setup of ``Google VR`` libraries
-
-  * one module for each ``.aar`` dependency needed.
-
 ----
 
 Adding Photospheres to a simple project
@@ -191,7 +205,7 @@ Adding Photospheres to a simple project
 ----
 
 :data-x: 0
-:data-y: 1000
+:data-y: r1000
 
 .. image:: images/daydream-logo.png
    :class: center-image
@@ -204,13 +218,14 @@ Adding Photospheres to a simple project
 
 ----
 
-:class: hide-background
 :data-x: r1700
+:data-y: r0
+
+:class: hide-background
 
 .. image:: images/daydream-headset.png
    :height: 800px
 
-Google IO 2016 `General <https://youtu.be/rOCaujUOCuE>`_ `Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
 
 
 ----
@@ -285,8 +300,8 @@ New SDK features
 * Controlling the controller
 
   * Orientation/Acceleration 
-  * Clickpad
-  * Buttons
+  * Clickpad (x,y, clicked)
+  * Buttons (App, Vol+/-)
 
 * Spatial Audio Engine
 
@@ -295,8 +310,11 @@ New SDK features
 Deprecation & Deletion
 ----------------------
 
-* ``Deprecation of v1 Cardboards`` 😱
-* Deprecation of Cardboard Button infavor of Controller
+* ``Deprecation of v1.0 Cardboards`` 😱
+
+  * Magnets are uncool!
+  * Deprecation of Cardboard button infavor of Controller
+
 * Renaming ``Cardboard*`` to ``Gvr*``
 
 ----
@@ -309,6 +327,14 @@ Deprecation & Deletion
 :data-rotate-z: 90
 :class: last-slide
 
-Thank you
-=========
+What would you build?
+=====================
 
+Q & A
+-----
+
+* Links
+
+  * `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
+  * `Google VR <https://vr.google.com>`_
+  * `Google VR Github <https://github.com/googlevr/gvr-android-sdk>`_
