@@ -45,6 +45,8 @@
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 * 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrberlin>`_
 
+  * Please interrupt.
+
 .. note::
 
         * Please follow the slides at the given address.
@@ -105,11 +107,10 @@ How does Cardboard work?
 How do you program for it?
 --------------------------
 
-SDKs available for 
+Googles SDK are available for
 
 * Android (OpenGL),
 * IOS (Objective C),
-* Web (JS),
 * Unity Engine (C# /JS) x (🍎, G,💻, 🐧).
 
 ----
@@ -319,22 +320,15 @@ Deprecation & Deletion
 
 ----
 
-:data-x: -1700
-:data-y: 1900
-:data-z: 2000
+:data-x: -1600
+:data-y: 1800
+:data-z: 2500
 :data-rotate-x: 0
 :data-rotate-y: -60
 :data-rotate-z: 90
 :class: last-slide
 
 What would you build?
-=====================
 
-Q & A
------
-
-* Links
-
-  * `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
-  * `Google VR <https://vr.google.com>`_
-  * `Google VR Github <https://github.com/googlevr/gvr-android-sdk>`_
+* `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
+* `Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_

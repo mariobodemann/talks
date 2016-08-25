@@ -106,10 +106,9 @@ a::after {
 }
 
 .last-slide {
-    background-color: rgb(164, 196, 57);
+    background-color: white;
     height: auto;
     padding: auto;
-    left: 600px;
 }
 
 div.main-title > p {
