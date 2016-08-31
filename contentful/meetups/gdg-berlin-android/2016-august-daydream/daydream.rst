@@ -57,6 +57,29 @@
 :data-x: 0
 :data-y: r1000
 
+Agenda
+------
+
+* .. image:: images/cardboard.png
+   :width: 300px
+  
+* .. image:: images/daydream-logo.png
+   :width: 300px
+ 
+.. note:: 
+
+  * Cardboard
+    
+    * Overview
+    * Demos (unity/java)
+
+  * Daydream
+
+    * Overview
+    * Differences to Cardboard
+
+----
+
 .. image:: images/cardboard.png
    :class: center-image
    :width: 1000px 
