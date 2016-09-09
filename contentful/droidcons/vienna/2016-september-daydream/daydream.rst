@@ -23,8 +23,10 @@
   Virtual Reality in Android
 
 .. note::
-
-        Do you want to ask the audience level? (``Android Pro/Medium/Beginner + VR Done'it/Knowsaboutit/new``)
+   Audience
+   
+   * ``Android programmer? 👋``
+   * ``VR programmer? 👋``
 
 ----
 
@@ -37,19 +39,18 @@
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 * 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrberlin>`_
 
-  * Please interrupt!
+  * Please interrupt `👄👅 <http://blah.de/>`_!
 
 .. note::
-
-        * Please follow the slides at the given address.
-        * Wait some seconds to see if someone is writing down the address...
+   * Please follow the slides at the given address.
+   * Wait some seconds to see if someone is writing down the address...
 
 ----
 
 :data-x: -1000
-:data-y: 1750
+:data-y: 2300
 :data-z: 0
-:data-scale: 4
+:data-scale: 6
 :class: hide-background
 
 Agenda
@@ -265,7 +266,7 @@ Prerequisites
    :class: center-image-huge
 
 .. note::
-  Download(?) a material from asset store, to assign to all models: Move Material to right hand object pool.
+   Download(?) a material from asset store, to assign to all models: Move Material to right hand object pool.
 
 ----
 
@@ -299,7 +300,7 @@ Prerequisites
    :class: center-image-huge
 
 .. note::
-   Move a cube
+   Move that cube.
 
 ----
 
@@ -309,30 +310,20 @@ Prerequisites
 :class: hide-background
 
 .. note::
-   Take a look at the cursor.
+   Take a look where the mouse cursor is pointing at.
 
 ----
 
 :data-x: r2050
 :data-y: r150
 :data-scale: 1
-
-Let us add some more objects
-============================
-
-* Add a sphere, capsule, cylinder.
-* Move them arround
-
-----
-
-:data-x: r2000
 :class: hide-background
 
 .. image:: images/unity-demo-more-objects-added.png
    :class: center-image-huge
 
 .. note::
-   Cube/Sphere/Cylinder/Capsule
+   Adding one of each: Cube/Sphere/Cylinder/Capsule
 
 ----
 
@@ -342,7 +333,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   shows camera preview
+   Take a look at the camera preview: It does not look to colourfull. Let's change that.
 
 ----
 
@@ -354,6 +345,9 @@ Let us add some more objects
 .. image:: images/unity-demo-assets.png
    :class: center-image-huge
 
+.. note::
+   Overview of next steps: Let's add materials.
+
 ----
 
 :data-x: r-775
@@ -362,7 +356,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Click on favorite assets
+   Click on ``Favorites\All Material``
 
 ----
 
@@ -372,7 +366,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Click on assetstore
+   Click on ``Asset Store``
 
 ----
 
@@ -381,7 +375,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Click on an asset which is interesting/looks nice
+   Click on an asset which is interesting/looks nice (``RedBeard_Bluestone WallV2``)
 
 ----
 
@@ -391,8 +385,8 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Check number of assets > objects
-   Hit ``import``
+   * Check ``Asset count``: Defines how many different materials are included. the more the nicer looking.
+   * Hit ``Import package``.
 
 ----
 
@@ -405,7 +399,7 @@ Let us add some more objects
    :class: center-image
 
 .. note::
-   Import all assets.
+   Hit ``import`` after checking all checkmarks (should already be the case)
 
 ----
 
@@ -416,6 +410,9 @@ Let us add some more objects
 .. image:: images/unity-demo-multi-assign-material.png
    :class: center-image-huge
 
+.. note::
+   No change, we have to assign the material to different objects.
+
 ----
 
 :data-x: r-150
@@ -424,7 +421,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Use SHIFT to click select multiple objects
+   Use SHIFT to click select multiple objects.
 
 ----
 
@@ -433,7 +430,7 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Hit the little hidden button next to the material to assign a material
+   Hit the little hidden button next to ``Inspector > ✓ Mesh Renderer > Materials > Element 0 > Default Material … ○``
 
 ----
 
@@ -442,7 +439,8 @@ Let us add some more objects
 :class: hide-background
 
 .. note::
-   Select a material to be assigned and hit ok
+   * Select a material to be used.
+   * Repeat for all objects.
 
 ----
 
@@ -455,29 +453,18 @@ Let us add some more objects
    :class: center-image-huge
 
 .. note::
-   Looks nice, let's simulate
+   Looks nice, let's ``run`` it.
 
 ----
 
 :data-x: r2000
-:data-y: r0
-:class: hide-background
-
-.. image:: images/unity-demo-play-no-rigid.png
-   :class: center-image-huge
-
-.. note::
-   Hitting play does not reveal any animation.
-
-----
-
-:data-x: r0
 :data-y: r-450
 :data-scale: 0.2
 :class: hide-background
 
 .. note::
-   Quickly go back to the previous slide to show nothing has changed.
+   * Run the current program to see what the user would see.
+   * (comparable to deploying  it to an emulator, checking before deploying to phone)
 
 ----
 
@@ -485,6 +472,12 @@ Let us add some more objects
 :data-y: r450
 :data-scale: 1
 :class: hide-background
+
+.. image:: images/unity-demo-play-no-rigid.png
+   :class: center-image-huge
+
+.. note::
+   Looks nice, but there is nothing happening, let's change that!
 
 ----
 
@@ -496,30 +489,69 @@ Let us add some more objects
    :class: center-image-huge
 
 .. note::
-   Add rigid body for selected objects
+   Overview of adding a ``gravity`` animation
 
 ----
 
+:data-x: r0
+:data-y: r-270
+:data-scale: 0.2
+:class: hide-background
+
+.. note::
+   * Select all gravityable objects using SHIFT and left mouse click. 
+   * Do not add the plane, since the other objects need something to ``land`` on.
+
+----
+
+:data-x: r-450
+:data-y: r-100
+:data-scale: 0.5
+:class: hide-background
+
+.. note::
+   Add ``gravity`` to all selected objects by hitting menu option ``Component > Physics > Rigidbody``.
+
+----
+
+:data-x: r2450
+:data-scale: 0.3
+:class: hide-background
+
+.. note::
+   Hit play.
+
+---- 
+
+:data-x: r0
+:data-y: r470
+:data-scale: 1.0
 :class: hide-background
 
 .. image:: images/unity-demo-rigid-simple.gif
   :class: center-image-huge
 
 .. note::
-   show stupidly simple animation
+   * Show stupidly simple animation
+   * Nice, but we can do more ....
 
 ----
 
+:data-x: r2000
+:data-y: r-70
+:data-scale: 1
 :class: hide-background
 
 .. image:: images/unity-demo-rigid-complex.png
    :class: center-image-huge
 
 .. note::
-   Copying more objects, lets see the interaction
-   Also: I moved the camera inside of the action
+   * Copying objects by using ``Copy and Paste``
+   * Also: I moved the camera inside of the action
 
 ----
+
+:data-y: r0
 
 :class: hide-background
 
@@ -527,20 +559,170 @@ Let us add some more objects
    :class: center-image-huge
 
 .. note::
-   Now with fancy animations
-   Cannot see the other parts, lets use a cardboard!
+   * Now with fancy interactions and animations.
+   * Cannot see the other parts, lets use a cardboard! :)
 
 ----
 
-* Import the Unity package by going to Assets > Import Package > Custom Package.
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-menu.png
+   :class: center-image-huge
+
+.. note::
+   Import the Unity package by going to Assets > Import Package > Custom Package.
 
 ----
 
-* Apply Camera by going to Assets/GoogleVR/Prefabs and move the GvrViewerMain onto the camera.
+:data-x: r-600
+:data-y: r-300
+:data-scale: 0.4
+:class: hide-background
+
+.. note::
+   zoomed in view
 
 ----
 
-* Play Scene. (Mention building it for Android and provide it later on)
+:data-x: r2600
+:data-y: r300
+:data-scale: 1
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-dialog.png
+   :class: center-image
+
+.. note::
+   * Find the checked out folder from step 1
+   * Select the ``GoogleVRForUnity.unitypackage``
+   * Hit ``Open``.
+   * Wait
+
+----
+
+:data-x: r2000
+:data-y: r0
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-all-packages.png
+   :class: center-image-huge
+
+.. note::
+   Select ``all`` and hit ``ok`` again. You have now the complete sdk imported.
+
+----
+
+:data-x: r2000
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-progress.png
+   :class: center-image
+
+.. note::
+   Please wait ... ;)
+
+----
+
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-update.png
+   :class: center-image
+
+.. note::
+   * Updating is fine for simple projects, more complex might be an issue.
+   * ``I Made a Backup. Go Ahead!``
+
+----
+
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-add-gvrmainviewer.png
+   :class: center-image-huge
+
+.. note::
+   * Sofar no changes
+   * We need to add the ``GvrViewerMain`` to the camera of our scene.
+
+----
+
+:data-x: r-775
+:data-y: r300
+:data-scale: 0.3
+:class: hide-background
+
+.. note::
+   Select ``Project > Assets > GoogleVR > Prefabs``
+
+----
+
+:data-x: r400
+:data-y: r-100
+:data-scale: 0.25
+:class: hide-background
+
+.. note::
+   Start drag and drop the ``prefab``.
+
+----
+
+:data-x: r1675
+:data-y: r-400
+:data-scale: .3
+:class: hide-background
+
+.. note::
+   * Drop it onto the Main Camera (indicated by round rect)
+   * Sofar no changes
+   * We need to add the ``GvrViewerMain`` to the camera of our scene.
+
+----
+
+:data-x: r700
+:data-y: r400
+:data-scale: 1
+:class: hide-background
+
+.. image:: images/unity-demo-add-gvr-dnd-camera.png
+   :class: center-image-huge
+
+.. note::
+   * Again no change :(
+   * Let's run it.
+
+----
+
+:data-x: r2000
+:data-y: r0
+:class: hide-background
+
+.. image:: images/unity-demo-cardboard-simple.gif
+   :class: center-image-huge
+
+.. note::
+   * We see changes
+   * Image distortion, left and right eye
+   * Can we simulate rotation of the head?
+
+----
+
+:class: hide-background
+
+.. image:: images/unity-demo-cardboard-rotation.gif
+   :class: center-image-huge
+
+.. note::
+   Yes, we can simulate by holding down ALT and moving the cursor.
+
+----
+
+Summary of unity demo 
+---------------------
+
+* Writing an okayish demo in unity 
+* Using Cardboard SDK
+* Using internal renderer
+* `📱 APK <www.github.com/mariobodemann/daydream-unity/releases>`_
+* `📄 Project <www.github.com/mariobodemann/daydream-unity/>`_
 
 ----
 
@@ -694,17 +876,22 @@ Deprecation & Deletion
 
 ----
 
-:data-x: -3000
-:data-y: 1800
-:data-z: 3000
-:data-rotate-x: 0
-:data-rotate-y: -75
-:data-rotate-z: 90
+:data-x: 8000
+:data-y: 7000
+:data-z: 0
+:data-scale: 12
 :class: last-slide
 
 What will you build?
 
-* `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
-* `📄 Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
-* `🐦@MarioBodemann <http://twitter.com/@MarioBodemann>`_
+`🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
+`📄 Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
+
+
+
+
+
+
+
+`🐦@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 

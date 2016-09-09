@@ -74,10 +74,6 @@ a {
       0px  6px 10px #f03e48;  
 }
 
-a::after {
-    content: "🔖";
-}
-
 .hidden {
     display: none;
 }
@@ -144,7 +140,8 @@ div.main-speaker > p {
 .scolling-background {
   position: absolute;
   left: -50%;
-  top: -75%
+  top: -75%;
+  image-rendering: pixelated;
 }
 
 .center-image {
@@ -152,6 +149,7 @@ div.main-speaker > p {
     top: 5%;
     height: 90%;
     width: auto;
+    transform: translate3d(0px, 0px, 10px);
 }
 
 .center-image-huge {
