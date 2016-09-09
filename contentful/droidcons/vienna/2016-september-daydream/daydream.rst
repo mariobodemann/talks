@@ -243,7 +243,7 @@ Prerequisites
    :class: center-image-huge
 
 .. note::
-   Change Size of plane
+   Open inspector on righthand side
 
 ----
 
@@ -253,7 +253,7 @@ Prerequisites
 :class: hide-background
 
 .. note::
-   Plane added. Lets make it bigger
+   Search for ``Inspector >  Transform > Scale``
 
 ----
 
@@ -266,7 +266,8 @@ Prerequisites
    :class: center-image-huge
 
 .. note::
-   Download(?) a material from asset store, to assign to all models: Move Material to right hand object pool.
+   * See size changed to be screen filling.
+   * Let's make it more exciting > more objects!
 
 ----
 
@@ -876,7 +877,7 @@ Deprecation & Deletion
 
 ----
 
-:data-x: 8000
+:data-x: 10000
 :data-y: 7000
 :data-z: 0
 :data-scale: 12
