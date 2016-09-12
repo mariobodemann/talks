@@ -144,6 +144,10 @@ div.main-speaker > p {
   image-rendering: pixelated;
 }
 
+.center p {
+    text-align: center;
+}
+
 .center-image {
     position: relative;
     top: 5%;

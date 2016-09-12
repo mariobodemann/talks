@@ -716,26 +716,25 @@ Prerequisites
 
 ----
 
-Summary of unity demo 
+Summary of Unity Demo 
 ---------------------
 
-* Writing an okayish demo in unity 
-* Using Cardboard SDK
-* Using internal renderer
-* `📱 APK <www.github.com/mariobodemann/daydream-unity/releases>`_
-* `📄 Project <www.github.com/mariobodemann/daydream-unity/>`_
+* Using Unity is fast
+* Using Cardboard SDK is easy
+* Using internal renderer for simulating
+
+.. container:: center
+
+   `📄 Project <https://github.com/mariobodemann/unity-cardboard-sample>`_ `📱 APK <https://github.com/mariobodemann/unity-cardboard-sample/blob/master/cardboard-sample.apk?raw=true>`_ 
 
 ----
 
-What can I do in pure Android only?
------------------------------------
+Difficulties in using Unity
+---------------------------
 
-* ``VrPanoramaView``/``VrVideoView``
-
-  * integration of photospheres in view hierarchies
-
-* integration with other (Java) libraries
-* sending of Intents easily
+* Cost for non free version exists.
+* Integration with other (Java) libraries difficult at best.
+* Sending of Intents (aka interacting with Android OS / apps) is rather hard.
 
 ----
 
