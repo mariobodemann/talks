@@ -765,7 +765,7 @@ Difficulties in using Unity
 :class: hide-background
 :data-x: r190
 :data-y: r240
-:data-z: r-800
+:data-scale: 0.2
 
 .. note::
    Controller
@@ -784,7 +784,7 @@ Difficulties in using Unity
 :class: hide-background
 :data-x: r-400
 :data-y: r-12
-:data-z: r100
+:data-scale: 0.3
 
 .. note::
    Headset Phone
@@ -799,8 +799,7 @@ Difficulties in using Unity
 :class: hide-background
 :data-x: r210
 :data-y: r-228
-:data-z: r700
-
+:data-scale: 0.5
 
 .. note::
    Complete Package
@@ -821,7 +820,7 @@ Difficulties in using Unity
 
 :data-x: r2000
 :data-y: r0
-:data-z: r0
+:data-scale: 1
 
 New SDK features
 ----------------
