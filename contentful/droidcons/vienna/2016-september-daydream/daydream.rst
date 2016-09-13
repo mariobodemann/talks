@@ -838,7 +838,7 @@ New SDK features
 
 .. raw:: html
 
-  <iframe width="100%" height="100%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=//storage.googleapis.com/vrview/examples/coral.jpg&is_stereo=true"></iframe>
+  <iframe width="100%" height="100%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=//storage.googleapis.com/vrview/examples/coral.jpg&preview=//storage.googleapis.com/vrview/examples/coral.jpg"></iframe>
 
 ----
 

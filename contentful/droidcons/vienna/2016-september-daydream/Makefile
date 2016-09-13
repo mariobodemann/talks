@@ -17,5 +17,7 @@ clean:
 	rm -rf $(HTMLS)
 	
 slides: all
+	cp daydream.css daydream.css.bk
+	cat daydream-slides.css >> daydream.css
 	decktape -s 1920x1080 "${PWD}/*-html/index.html" "${PWD}/slides.pdf"
-
+	mv daydream.css.bk daydream.css
