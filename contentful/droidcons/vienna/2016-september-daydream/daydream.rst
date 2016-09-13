@@ -37,7 +37,7 @@
 
 * 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
-* 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrberlin>`_
+* 📄: `bit.ly/mbvrberlin <http://bit.ly/mbvrvienna>`_
 
   * Please interrupt `👄👅 <http://blah.de/>`_!
 
@@ -725,7 +725,7 @@ Summary of Unity Demo
 
 .. container:: center
 
-   `📄 Project <https://github.com/mariobodemann/unity-cardboard-sample>`_ `📱 APK <https://github.com/mariobodemann/unity-cardboard-sample/blob/master/cardboard-sample.apk?raw=true>`_ 
+   `📄 Project <http://bit.ly/mbvrvienna-git>`_ `📱 APK <https://bit.ly/mbvrvienna-apk>`_
 
 ----
 
@@ -735,31 +735,6 @@ Difficulties in using Unity
 * Cost for non free version exists.
 * Integration with other (Java) libraries difficult at best.
 * Sending of Intents (aka interacting with Android OS / apps) is rather hard.
-
-----
-
-Limitations of Android SDK
---------------------------
-
-* using 3D models has to be done by
-
-  * either low level OpenGL or 
-  * 3rd party 3d engine
-
-----
-
-Adding Photospheres to a simple project
----------------------------------------
-
-.. note::
-
-        * Open Android Studio.
-        * Open ``Simple Android List View`` project.
-        * Show current status in ``Vysor``.
-        * Add three dependencies by hand: ``Common, CommonWidget, PanoWidget (Sources/Others/gvr-android-sdk/libraries)``
-        * Use VrPanoramaView in xml, increasing the ``height`` of view.
-        * Use VrPanoramaView in java (adapter)
-        * Load image from resources. (``VrPanoramaView.load``, ``BitmapFactory.decoderesource)``
 
 ----
 
@@ -793,17 +768,16 @@ Adding Photospheres to a simple project
 :data-z: r-800
 
 .. note::
+   Controller
 
-        Controller
+   * uses special hardware as controller
 
-        * uses special hardware as controller
+     * can get emulated by any Android phone (>= 4.4)
+     * has four Buttons: Volume +/-, App(Programmable), Home
+     * clickable Touchpad. (x/y position, clicked state)(emulated by two touches)
 
-                * can get emulated by any Android phone (>= 4.4)
-                * has four Buttons: Volume +/-, App(Programmable), Home
-                * clickable Touchpad. (x/y position, clicked state)(emulated by two touches)
-
-        * Print out sheet to not get to disctracted by Phone
-        * Connects via bluetooth to ``Headset Phone``
+   * Print out sheet to not get to disctracted by Phone
+   * Connects via bluetooth to ``Headset Phone``
 
 ----
 
@@ -813,13 +787,12 @@ Adding Photospheres to a simple project
 :data-z: r100
 
 .. note::
+   Headset Phone
 
-        Headset Phone
-
-        * has to be a ``Nexus 6P`` running ``Android Nougat 7.0``
-        * start a Daydream app once, set it up by clicking on the ``Gear``, enabling all VR settings
-        * ``Reboot phone ...`` ;) .
-        * Bluetooth to connect to controller.
+   * has to be a ``Nexus 6P`` running ``Android Nougat``
+   * start a Daydream app once, set it up by clicking on the ``Gear``, enabling all VR settings
+   * ``Reboot phone ...`` ;) .
+   * Bluetooth to connect to controller.
 
 ----
 
@@ -830,20 +803,19 @@ Adding Photospheres to a simple project
 
 
 .. note::
+   Complete Package
 
-        Complete Package
+   * ``Daydream Ready``
 
-        * ``Daydream Ready``
+     * high performance sensors for high accuracy head tracking
+     * displays with fast response time to minimize blur
+     * powerfull mobile processor
+     * VR System notifications
 
-                * high performance sensors for high accuracy head tracking
-                * displays with fast response time to minimize blur
-                * powerfull mobile processor
-                * VR System notifications
-
-        * will be available ``in fall``
-        * will be created by hardware partners
-        * certified by ``Google``
-        * Google Play for VR and ``Daydream Home``
+   * will be available ``in fall``
+   * will be created by hardware partners
+   * certified by ``Google``
+   * Google Play for VR and ``Daydream Home``
 
 ----
 
@@ -857,10 +829,16 @@ New SDK features
 * Controlling the controller
 
   * orientation/acceleration 
-  * clickpad (x,y, clicked)
-  * buttons (App, Vol+/-)
+  * input (Clickpad: x,y, clicked, App Button, Vol+/-)
 
 * spatial audio engine
+* VR View
+
+----
+
+.. raw:: html
+
+  <iframe width="100%" height="100%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=//storage.googleapis.com/vrview/examples/coral.jpg&is_stereo=true"></iframe>
 
 ----
 
@@ -876,22 +854,49 @@ Deprecation & Deletion
 
 ----
 
+Adding Photospheres to a simple project
+---------------------------------------
+
+.. note::
+
+        * Open Android Studio.
+        * Open ``Simple Android List View`` project.
+        * Show current status in ``Vysor``.
+        * Add three dependencies by hand: ``Common, CommonWidget, PanoWidget (Sources/Others/gvr-android-sdk/libraries)``
+        * Use VrPanoramaView in xml, increasing the ``height`` of view.
+        * Use VrPanoramaView in java (adapter)
+        * Load image from resources. (``VrPanoramaView.load``, ``BitmapFactory.decoderesource)``
+
+----
+
+Limitations of Android SDK
+--------------------------
+
+* using 3D models has to be done by
+
+  * either low level OpenGL or 
+  * 3rd party 3d engine
+
+----
+
 :data-x: 10000
-:data-y: 7000
+:data-y: 7500
 :data-z: 0
 :data-scale: 12
 :class: last-slide
 
 What will you build?
+--------------------
 
-`🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
-`📄 Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
+.. container:: center
 
+  `🎥 General <https://youtu.be/rOCaujUOCuE>`_ `🎥 Controller <https://www.youtube.com/watch?v=l9OfmWnqR0M>`_ `🎥 Designing <https://www.youtube.com/watch?v=00vzW2-PvvE>`_
 
+.. container:: center
 
+  `📄 Google VR <https://vr.google.com>`_ `Github <https://github.com/googlevr/gvr-android-sdk>`_
 
+.. container:: center
 
-
-
-`🐦@MarioBodemann <http://twitter.com/@MarioBodemann>`_
+  `🐦@MarioBodemann <http://twitter.com/@MarioBodemann>`_
 
