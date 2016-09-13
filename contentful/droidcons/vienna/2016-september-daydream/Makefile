@@ -4,9 +4,6 @@ HTMLS = $(patsubst %.rst,%-html,$(RSTS))
 
 all : $(HTMLS)
 
-%-html: %.rst
-	hovercraft $^ $@
-
 debug : $(RSTS)
 	watch -n 5 make
 

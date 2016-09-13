@@ -822,49 +822,120 @@ Difficulties in using Unity
 :data-y: r0
 :data-scale: 1
 
-New SDK features
-----------------
+Daydream SDK features
+---------------------
 
+* Same as Cardboard SDK
 * Controlling the controller
 
   * orientation/acceleration 
   * input (Clickpad: x,y, clicked, App Button, Vol+/-)
 
 * spatial audio engine
-* VR View
 
 ----
+
+
+.. container:: center
+
+  VrView on Web/ios/Android
 
 .. raw:: html
 
-  <iframe width="100%" height="100%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=//storage.googleapis.com/vrview/examples/coral.jpg&preview=//storage.googleapis.com/vrview/examples/coral.jpg"></iframe>
-
-----
-
-Deprecation & Deletion
-----------------------
-
-* ``deprecation of v1.0 Cardboards`` 😱
-
-  * magnets are uncool!
-  * deprecation of cardboard button infavor of controller
-
-* renaming ``Cardboard*`` packages to ``Gvr*``
-
-----
-
-Adding Photospheres to a simple project
----------------------------------------
+  <iframe width="100%" height="90%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=https://raw.githubusercontent.com/google/vrview/master/examples/pano/andes_2048.jpg&is_stereo=true"></iframe>
 
 .. note::
+   VRView, available for 
 
-        * Open Android Studio.
-        * Open ``Simple Android List View`` project.
-        * Show current status in ``Vysor``.
-        * Add three dependencies by hand: ``Common, CommonWidget, PanoWidget (Sources/Others/gvr-android-sdk/libraries)``
-        * Use VrPanoramaView in xml, increasing the ``height`` of view.
-        * Use VrPanoramaView in java (adapter)
-        * Load image from resources. (``VrPanoramaView.load``, ``BitmapFactory.decoderesource)``
+   * Android
+   * IOS
+   * Web
+   
+   Not for Unity!
+
+----
+
+Simple RecyclerView with 4 items `🎥 Images from Google <https://github.com/google/vrview>`_
+
+.. image:: images/android-demo-untouched.png
+   :class: center-image
+
+
+----
+
+:class: hide-background
+
+.. image:: images/andes.jpg
+   :class: center-image
+
+.. note::
+   Those images are represented by the ids seen earlier
+
+----
+
+:class: hide-background
+
+.. image:: images/android-demo-final.gif
+   :class: center-image-huge
+
+.. note:: 
+   Using VrPanoramaView we'll be able to generate those interactions.
+
+----
+
+Sample Recycler View Project
+----------------------------
+
+`📄  Source Code <http://bit.ly/mbvrvienna-android>`_
+
+.. code:: bash
+  
+  MainActivity.java
+  ConstantResourceAdapter.java
+
+----
+
+ConstantResourceAdapter
+-----------------------
+
+.. code:: java
+   
+   foobar
+
+----
+
+ItemView.xml
+------------
+
+.. code:: xml
+
+  something something
+
+----
+
+Making the change
+-----------------
+
+.. code:: xml
+
+   something else something else
+
+----
+
+Changes in java
+---------------
+
+.. code:: java
+
+  TextView -> VrPanoramaView
+
+----
+
+RUN
+---
+
+.. note::
+   Success!!
 
 ----
 
