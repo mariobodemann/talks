@@ -855,11 +855,13 @@ Daydream SDK features
 
 ----
 
-Simple RecyclerView with 4 items `🎥 Images from Google <https://github.com/google/vrview>`_
+Simple RecyclerView with 4 VrViews `🎥 Images from Google <https://github.com/google/vrview>`_
 
-.. image:: images/android-demo-untouched.png
+.. image:: images/android-demo-final.gif
    :class: center-image
 
+.. note::
+   Final result of our current demo
 
 ----
 
@@ -873,74 +875,459 @@ Simple RecyclerView with 4 items `🎥 Images from Google <https://github.com/go
 
 ----
 
-:class: hide-background
+Sample Recycler View Project
+----------------------------
 
-.. image:: images/android-demo-final.gif
-   :class: center-image-huge
+`📄  Source Code <http://bit.ly/mbvrvienna-android>`_
+
+.. image:: images/android-demo-untouched.png
+   :class: center-image
 
 .. note:: 
    Using VrPanoramaView we'll be able to generate those interactions.
 
 ----
 
-Sample Recycler View Project
-----------------------------
-
-`📄  Source Code <http://bit.ly/mbvrvienna-android>`_
+Project Layout
+--------------
 
 .. code:: bash
   
   MainActivity.java
   ConstantResourceAdapter.java
 
+  activity_main.xml 
+  resource_layout.xml 
+
 ----
 
-ConstantResourceAdapter
------------------------
+MainActivity.java
+
+.. container:: dimmed
+
+ .. code:: java
+  
+  ButterKnife.bind(this);
+  
+  recyclerView.setLayoutManager(
+    new LinearLayoutManager(this, 
+      LinearLayoutManager.VERTICAL, false));
+
+  RecyclerView.Adapter adapter = 
+    new ConstantResourceAdapter();
+
+  recyclerView.setAdapter(adapter);
+
+.. note:: 
+  Uses ``ButterKnife`` to bind ``activity_main.xml``'s ``RecyclerView``, 
+  creates the ``ConstantResourceAdapter``.
+
+----
+
+MainActivity.java
 
 .. code:: java
-   
-   foobar
+  
+  ButterKnife.bind(this);
+  
+.. container:: dimmed
+
+ .. code:: java
+  
+  recyclerView.setLayoutManager(
+    new LinearLayoutManager(this, 
+      LinearLayoutManager.VERTICAL, false));
+
+  RecyclerView.Adapter adapter = 
+    new ConstantResourceAdapter();
+
+  recyclerView.setAdapter(adapter);
 
 ----
 
-ItemView.xml
-------------
+MainActivity.java
+
+.. code:: java
+  
+  ButterKnife.bind(this);
+  
+  recyclerView.setLayoutManager(
+    new LinearLayoutManager(this, 
+      LinearLayoutManager.VERTICAL, false));
+
+.. container:: dimmed
+
+ .. code:: java
+  
+  RecyclerView.Adapter adapter = 
+    new ConstantResourceAdapter();
+
+  recyclerView.setAdapter(adapter);
+
+----
+
+MainActivity.java
+
+.. code:: java
+  
+  ButterKnife.bind(this);
+  
+  recyclerView.setLayoutManager(
+    new LinearLayoutManager(this, 
+      LinearLayoutManager.VERTICAL, false));
+
+  RecyclerView.Adapter adapter = 
+    new ConstantResourceAdapter();
+
+  recyclerView.setAdapter(adapter);
+
+----
+
+
+ConstantResourceAdapter.java
+
+.. code:: java
+
+  private static final List<Integer> elements = 
+    new ArrayList<>();
+
+  static {
+    elements.add(R.drawable.andes);
+    elements.add(R.drawable.congo);
+    elements.add(R.drawable.coral);
+    elements.add(R.drawable.io2016);
+  }
+    
+----
+
+ConstantResourceAdapter.java
+
+.. code:: java
+
+  static class ResourceItemViewHolder 
+    extends RecyclerView.ViewHolder {
+    private final TextView textView;
+
+    public ResourceItemViewHolder(View itemView) {
+      super(itemView);
+      textView = (TextView) itemView;
+    }
+  }
+
+
+----
+
+ConstantResourceAdapter.java
+
+.. container:: dimmed
+
+ .. code:: java
+  
+  public 
+  RecyclerView.ViewHolder onCreateViewHolder(…) {
+    
+    final LayoutInflater layoutInflater = 
+      LayoutInflater.from(parent.getContext());
+    
+    final View inflate = 
+      layoutInflater.inflate(R.layout.resource_layout,…
+    
+    return new ResourceItemViewHolder(inflate);
+  }
+
+----
+
+ConstantResourceAdapter.java
+
+
+.. code:: java
+  
+  public 
+  RecyclerView.ViewHolder onCreateViewHolder(…) //{
+
+
+.. container:: dimmed
+ 
+ .. code:: java     
+ 
+      final LayoutInflater layoutInflater = 
+        LayoutInflater.from(parent.getContext());
+    
+      final View inflate = 
+        layoutInflater.inflate(R.layout.resource_layout,…
+    
+      return new ResourceItemViewHolder(inflate);
+
+.. code:: java
+  
+  }
+
+----
+
+ConstantResourceAdapter.java
+
+
+.. code:: java
+  
+  public 
+  RecyclerView.ViewHolder onCreateViewHolder(…) {
+
+    final LayoutInflater layoutInflater = 
+      LayoutInflater.from(parent.getContext());
+    
+    final View inflate = 
+      layoutInflater.inflate(R.layout.resource_layout);}
+  
+.. container:: dimmed
+ 
+ .. code:: java     
+ 
+      return new ResourceItemViewHolder(inflate);
+
+.. code:: java
+  
+  }
+
+----
+
+ConstantResourceAdapter.java
+
+
+.. code:: java
+  
+  public 
+  RecyclerView.ViewHolder onCreateViewHolder(…) {
+
+    final LayoutInflater layoutInflater = 
+      LayoutInflater.from(parent.getContext());
+    
+    final View inflate = 
+      layoutInflater.inflate(R.layout.resource_layout,…)
+
+    return new ResourceItemViewHolder(inflate);
+  }
+
+----
+
+ConstantResourceAdapter.java
+
+.. code:: java
+
+  public void onBindViewHolder(
+    RecyclerView.ViewHolder baseHolder, 
+    int position) {
+    
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+    
+    viewHolder.textView.setText(
+      elements.get(position));
+  }
+
+----
+
+resource_layout.xml
 
 .. code:: xml
 
-  something something
+  <TextView 
+     […]
+     android:layout_height="100dp"
+     android:textSize="32sp"
+   />
+
+----
+
+Result
+
+.. image:: images/android-demo-untouched.png
+      :class: center-image
 
 ----
 
 Making the change
 -----------------
 
-.. code:: xml
+Add \*.aar dependencies to app
 
-   something else something else
+ * `common.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/common/common.aar>`_
+ * `commonwidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/commonwidget/commonwidget.aar>`_ and 
+ * `panowidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/panowidget/panowidget.aar>`_ 
+
+from `Google VR Android Github <http://github.com/googlevr/gvr-android-sdk>`_ 
 
 ----
 
-Changes in java
----------------
+Change in ``resource_layout.xml``
+
+.. code:: xml
+  
+  <TextView
+    […]
+
+to
+
+.. code:: xml
+
+  <com.google.vr.sdk.widgets.pano.VrPanoramaView
+     […]
+
+----
+
+Change in ``ConstantResourceAdapter.java``
 
 .. code:: java
 
-  TextView -> VrPanoramaView
+    class ResourceItemViewHolder 
+      extends RecyclerView.ViewHolder {
+    
+    private final VrPanoramaView vrPanoramaView;
 
-----
-
-RUN
----
+    public ResourceItemViewHolder(View itemView) {
+      super(itemView);
+      vrPanoramaView = (VrPanoramaView) itemView;
+    }
+  }
 
 .. note::
-   Success!!
+  Replacing  TextView with VrPanoramaView
 
 ----
 
-Limitations of Android SDK
---------------------------
+.. code:: java
+   
+  @Override public void onBindViewHolder(…) //{
+
+.. container:: dimmed
+
+ .. code:: java
+
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+    final Resources resources = 
+      viewHolder.vrPanoramaView.getResources();
+    final Bitmap bitmap = 
+      BitmapFactory.decodeResource(resources, 
+        elements.get(position));
+    viewHolder.vrPanoramaView
+      .loadImageFromBitmap(bitmap, null);
+
+.. code:: java 
+
+  }
+
+----
+
+.. code:: java
+   
+  @Override public void onBindViewHolder(…) //{
+
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+.. container:: dimmed
+
+ .. code:: java
+
+    final Resources resources = 
+      viewHolder.vrPanoramaView.getResources();
+    final Bitmap bitmap = 
+      BitmapFactory.decodeResource(resources, 
+        elements.get(position));
+    viewHolder.vrPanoramaView
+      .loadImageFromBitmap(bitmap, null);
+
+.. code:: java 
+
+  }
+
+----
+
+.. code:: java
+   
+  @Override public void onBindViewHolder(…) //{
+
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+    final Resources resources = 
+      viewHolder.vrPanoramaView.getResources();
+.. container:: dimmed
+
+ .. code:: java
+    
+    final Bitmap bitmap = 
+      BitmapFactory.decodeResource(resources, 
+        elements.get(position));
+    viewHolder.vrPanoramaView
+      .loadImageFromBitmap(bitmap, null);
+
+.. code:: java 
+
+  }
+
+----
+
+.. code:: java
+   
+  @Override public void onBindViewHolder(…) //{
+
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+    final Resources resources = 
+      viewHolder.vrPanoramaView.getResources();
+    final Bitmap bitmap = 
+      BitmapFactory.decodeResource(resources, 
+        elements.get(position));
+.. container:: dimmed
+
+ .. code:: java
+
+    viewHolder.vrPanoramaView
+      .loadImageFromBitmap(bitmap, null);
+
+.. code:: java 
+
+  }
+
+----
+
+.. code:: java
+   
+  @Override public void onBindViewHolder(…) //{
+
+    final ResourceItemViewHolder viewHolder = 
+      (ResourceItemViewHolder) baseHolder;
+    final Resources resources = 
+      viewHolder.vrPanoramaView.getResources();
+    final Bitmap bitmap = 
+      BitmapFactory.decodeResource(resources, 
+        elements.get(position));
+    viewHolder.vrPanoramaView
+      .loadImageFromBitmap(bitmap, null);
+  }
+
+----
+
+Result
+
+.. image:: images/android-demo-final.gif
+   :class: center-image
+
+.. note::
+   Final result of our current demo
+
+----
+
+What did we do?
+---------------
+
+* Loaded a equirectangular image into a bitmap
+* Let it be displayed by a `VrPanoramaView`
+* Use Daydream SDK to display it
+
+----
+
+Limitations of Daydream for Android SDK
+---------------------------------------
 
 * using 3D models has to be done by
 
