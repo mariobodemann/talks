@@ -174,23 +174,3 @@ div.main-speaker > p {
 .dimmed pre span {
   color: gray!important;
 }
-div.notes {
-    display: none;
-    background: lightgray;
-    position: absolute;
-    top: 15px;
-    left: 0px;
-    width: 100%;
-    font-size: 20pt;
-}
-
-div.notes > *, div.notes > * > * {
-    margin-bottom: 0em;
-    margin-top: 0em;
-    padding-left: 0em;
-    line-height: auto;
-}
-
-div.active > div.notes {
-    display: block;
-}
