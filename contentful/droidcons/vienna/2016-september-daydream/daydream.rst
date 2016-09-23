@@ -838,7 +838,7 @@ Daydream SDK features
 
 .. container:: center
 
-  VrView on Web/ios/Android
+  VrView on Web/iOS/Android
 
 .. raw:: html
 
