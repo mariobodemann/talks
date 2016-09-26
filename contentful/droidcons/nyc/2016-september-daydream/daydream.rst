@@ -22,7 +22,6 @@
 
   Virtual Reality in Android
 
-
 ----
 
 :data-x: r2000
@@ -110,7 +109,8 @@ How do you program for it?
 Googles SDK are available for
 
 * Android (OpenGL)
-* IOS (Objective C)
+* iOS (Objective C)
+* Unreal Engine (*NEW*)
 * Unity Engine (C# /JS) x (🍎, G,💻, 🐧)
 
 ----
@@ -131,7 +131,7 @@ What else do they provide?
 
 * stereo geometry configuration
 * user input event handling
-* see `developer.google.com/vr/android/ <https://developers.google.com/vr/android/>`_
+* see `https://vr.google.com/developers/ <https://vr.google.com/developers/>`_
 
 ----
 
@@ -148,13 +148,15 @@ How do I write a Unity App?
 :data-x: r2000
 :data-y: r0
 
-Prerequisites
+Google Daydream Technical Preview
 
-* clone Googles github for unity https://github.com/googlevr/gvr-unity-sdk repsoitory
-* install and open Unity
-  
-  * 🍎/ 💻: https://store.unity.com/
-  * 🐧: http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/
+ * `special preview build from unity <https://unity3d.com/partners/google/daydream>`_
+ * Out of the box, basic functionality
+
+*or* Google VR Plugin
+
+ * Installer for Unity on `🍎+💻 <https://store.unity.com/>`_ (or `🐧 <http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/>`_)
+ * `Plugin <https://github.com/googlevr/gvr-unity-sdk>`_ gives full controller support and more
         
 ----
 
@@ -722,6 +724,7 @@ Summary of Unity Demo
 * Using Unity is fast
 * Using Cardboard SDK is easy
 * Using internal renderer for simulating
+* ``GvrIntent`` start of interoperation Android - Unity
 
 .. container:: center
 
@@ -734,7 +737,6 @@ Difficulties in using Unity
 
 * Cost for non free version exists.
 * Integration with other (Java) libraries difficult at best.
-* Sending of Intents (aka interacting with Android OS / apps) is rather hard.
 
 ----
 

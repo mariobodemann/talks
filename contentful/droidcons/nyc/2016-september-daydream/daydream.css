@@ -85,6 +85,16 @@ a {
     background-color: white;
 }
 
+.step.active::after {
+  content: "@MarioBodemann";
+  font-size: 18pt;
+  background: rgba(255,255,255,0.4);
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  padding:0.5em
+}
+
 .code-slide {
     font-family: Droid Sans Mono;
     background-color: white;
@@ -141,7 +151,6 @@ div.main-speaker > p {
   position: absolute;
   left: -50%;
   top: -75%;
-  image-rendering: pixelated;
 }
 
 .center p {
