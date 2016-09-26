@@ -834,6 +834,7 @@ Daydream SDK features
   * input (Clickpad: x,y, clicked, App Button, Vol+/-)
 
 * spatial audio engine
+* support for all Android architectures
 
 ----
 
