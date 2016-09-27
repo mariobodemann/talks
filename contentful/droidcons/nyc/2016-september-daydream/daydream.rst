@@ -833,11 +833,56 @@ Daydream SDK features
   * orientation/acceleration 
   * input (Clickpad: x,y, clicked, App Button, Vol+/-)
 
-* spatial audio engine
 * support for all Android architectures
 
 ----
 
+How to use the controller
+-------------------------
+
+.. code:: java
+
+    ControllerManager manager = 
+      new ControllerManager(this, 
+        new ControllerManager.EventListener() {
+      
+      public void onApiStatusChanged(int state) {
+      }
+
+      public void onRecentered() {
+      }
+    });
+
+.. note::
+
+   * ApiStatus changed: If controller gets invalid
+   * recenter: Long press on home button on controller, should assume current rotation is straight forward ...
+
+----
+
+.. code:: java
+
+    Controller controller = manager.getController();
+    if (controller != null) {
+      controller.timestamp
+      controller.orientation
+      controller.isTouching
+      controller.touch
+      controller.clickButtonState
+      controller.appButtonState
+      controller.homeButtonState
+      controller.volumeUpButtonState
+      controller.volumeDownButtonState
+    }
+
+.. note:: 
+
+  * orientation: Quaternion (xyzw)
+  * polling every frame
+
+----
+
+:data: new-section
 
 .. container:: center
 
@@ -858,13 +903,22 @@ Daydream SDK features
 
 ----
 
-Simple RecyclerView with 4 VrViews `🎥 Images from Google <https://github.com/google/vrview>`_
+Simple RecyclerView with 4 VrViews `© images <https://github.com/google/vrview>`_
 
 .. image:: images/android-demo-final.gif
    :class: center-image
 
 .. note::
-   Final result of our current demo
+   VrPanoramaView in Android
+
+----
+
+:class: new-section
+
+Run through the code
+====================
+
+How to write an photosphere app like this
 
 ----
 
@@ -874,326 +928,30 @@ Simple RecyclerView with 4 VrViews `🎥 Images from Google <https://github.com/
    :class: center-image
 
 .. note::
-   Those images are represented by the ids seen earlier
-
-----
-
-Sample Recycler View Project
-----------------------------
-
-`📄  Source Code <http://bit.ly/mbvrvienna-android>`_
-
-.. image:: images/android-demo-untouched.png
-   :class: center-image
-
-.. note:: 
-   Using VrPanoramaView we'll be able to generate those interactions.
-
-----
-
-Project Layout
---------------
-
-.. code:: bash
-  
-  MainActivity.java
-  ConstantResourceAdapter.java
-
-  activity_main.xml 
-  resource_layout.xml 
-
-----
-
-MainActivity.java
-
-.. container:: dimmed
-
- .. code:: java
-  
-  ButterKnife.bind(this);
-  
-  recyclerView.setLayoutManager(
-    new LinearLayoutManager(this, 
-      LinearLayoutManager.VERTICAL, false));
-
-  RecyclerView.Adapter adapter = 
-    new ConstantResourceAdapter();
-
-  recyclerView.setAdapter(adapter);
-
-.. note:: 
-  Uses ``ButterKnife`` to bind ``activity_main.xml``'s ``RecyclerView``, 
-  creates the ``ConstantResourceAdapter``.
-
-----
-
-MainActivity.java
-
-.. code:: java
-  
-  ButterKnife.bind(this);
-  
-.. container:: dimmed
-
- .. code:: java
-  
-  recyclerView.setLayoutManager(
-    new LinearLayoutManager(this, 
-      LinearLayoutManager.VERTICAL, false));
-
-  RecyclerView.Adapter adapter = 
-    new ConstantResourceAdapter();
-
-  recyclerView.setAdapter(adapter);
-
-----
-
-MainActivity.java
-
-.. code:: java
-  
-  ButterKnife.bind(this);
-  
-  recyclerView.setLayoutManager(
-    new LinearLayoutManager(this, 
-      LinearLayoutManager.VERTICAL, false));
-
-.. container:: dimmed
-
- .. code:: java
-  
-  RecyclerView.Adapter adapter = 
-    new ConstantResourceAdapter();
-
-  recyclerView.setAdapter(adapter);
-
-----
-
-MainActivity.java
-
-.. code:: java
-  
-  ButterKnife.bind(this);
-  
-  recyclerView.setLayoutManager(
-    new LinearLayoutManager(this, 
-      LinearLayoutManager.VERTICAL, false));
-
-  RecyclerView.Adapter adapter = 
-    new ConstantResourceAdapter();
-
-  recyclerView.setAdapter(adapter);
-
-----
-
-
-ConstantResourceAdapter.java
-
-.. code:: java
-
-  private static final List<Integer> elements = 
-    new ArrayList<>();
-
-  static {
-    elements.add(R.drawable.andes);
-    elements.add(R.drawable.congo);
-    elements.add(R.drawable.coral);
-    elements.add(R.drawable.io2016);
-  }
-    
-----
-
-ConstantResourceAdapter.java
-
-.. code:: java
-
-  static class ResourceItemViewHolder 
-    extends RecyclerView.ViewHolder {
-    private final TextView textView;
-
-    public ResourceItemViewHolder(View itemView) {
-      super(itemView);
-      textView = (TextView) itemView;
-    }
-  }
+   Sample equirectangular image
 
 
 ----
 
-ConstantResourceAdapter.java
+Dependencies
+------------
 
-.. container:: dimmed
+ * `common.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/common/common.aar>`_, `commonwidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/commonwidget/commonwidget.aar>`_ and `panowidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/panowidget/panowidget.aar>`_ as new module or directly in ``gradle``.
+ * ``compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'``
 
- .. code:: java
-  
-  public 
-  RecyclerView.ViewHolder onCreateViewHolder(…) {
-    
-    final LayoutInflater layoutInflater = 
-      LayoutInflater.from(parent.getContext());
-    
-    final View inflate = 
-      layoutInflater.inflate(R.layout.resource_layout,…
-    
-    return new ResourceItemViewHolder(inflate);
-  }
+see `Google VR Getting Started <https://developers.google.com/vr/android/get-started>`_ 
 
 ----
 
-ConstantResourceAdapter.java
-
-
-.. code:: java
-  
-  public 
-  RecyclerView.ViewHolder onCreateViewHolder(…) //{
-
-
-.. container:: dimmed
- 
- .. code:: java     
- 
-      final LayoutInflater layoutInflater = 
-        LayoutInflater.from(parent.getContext());
-    
-      final View inflate = 
-        layoutInflater.inflate(R.layout.resource_layout,…
-    
-      return new ResourceItemViewHolder(inflate);
-
-.. code:: java
-  
-  }
-
-----
-
-ConstantResourceAdapter.java
-
-
-.. code:: java
-  
-  public 
-  RecyclerView.ViewHolder onCreateViewHolder(…) {
-
-    final LayoutInflater layoutInflater = 
-      LayoutInflater.from(parent.getContext());
-    
-    final View inflate = 
-      layoutInflater.inflate(R.layout.resource_layout);}
-  
-.. container:: dimmed
- 
- .. code:: java     
- 
-      return new ResourceItemViewHolder(inflate);
-
-.. code:: java
-  
-  }
-
-----
-
-ConstantResourceAdapter.java
-
-
-.. code:: java
-  
-  public 
-  RecyclerView.ViewHolder onCreateViewHolder(…) {
-
-    final LayoutInflater layoutInflater = 
-      LayoutInflater.from(parent.getContext());
-    
-    final View inflate = 
-      layoutInflater.inflate(R.layout.resource_layout,…)
-
-    return new ResourceItemViewHolder(inflate);
-  }
-
-----
-
-ConstantResourceAdapter.java
-
-.. code:: java
-
-  public void onBindViewHolder(
-    RecyclerView.ViewHolder baseHolder, 
-    int position) {
-    
-    final ResourceItemViewHolder viewHolder = 
-      (ResourceItemViewHolder) baseHolder;
-    
-    viewHolder.textView.setText(
-      elements.get(position));
-  }
-
-----
-
-resource_layout.xml
-
-.. code:: xml
-
-  <TextView 
-     […]
-     android:layout_height="100dp"
-     android:textSize="32sp"
-   />
-
-----
-
-Result
-
-.. image:: images/android-demo-untouched.png
-      :class: center-image
-
-----
-
-Making the change
------------------
-
-Add \*.aar dependencies to app
-
- * `common.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/common/common.aar>`_
- * `commonwidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/commonwidget/commonwidget.aar>`_ and 
- * `panowidget.aar <https://github.com/googlevr/gvr-android-sdk/raw/master/libraries/panowidget/panowidget.aar>`_ 
-
-from `Google VR Android Github <http://github.com/googlevr/gvr-android-sdk>`_ 
-
-----
-
-Change in ``resource_layout.xml``
+``item_layout.xml``
 
 .. code:: xml
   
-  <TextView
-    […]
-
-to
-
-.. code:: xml
-
-  <com.google.vr.sdk.widgets.pano.VrPanoramaView
-     […]
-
-----
-
-Change in ``ConstantResourceAdapter.java``
-
-.. code:: java
-
-    class ResourceItemViewHolder 
-      extends RecyclerView.ViewHolder {
-    
-    private final VrPanoramaView vrPanoramaView;
-
-    public ResourceItemViewHolder(View itemView) {
-      super(itemView);
-      vrPanoramaView = (VrPanoramaView) itemView;
-    }
-  }
-
-.. note::
-  Replacing  TextView with VrPanoramaView
+  <?xml version="1.0" encoding="utf-8"?>
+  <com.google.vr.sdk.widgets.pano.VrPanoramaView 
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    />
 
 ----
 
