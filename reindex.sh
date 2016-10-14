@@ -1,5 +1,5 @@
 echo '<html><head><title>Talks by me</title></head><body>'
 echo '<ul>'
-find . -iname '*index*html' | sed -r 's#^(.*)$#  <li><a href="\1">\1</a></li>#g'
+find . -iname '*index*html' | sed 's#^\(.*\)$#  <li><a href="\1">\1</a></li>#g'
 echo '</ul>'
 echo '</body></html>'
