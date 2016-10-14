@@ -183,3 +183,15 @@ div.main-speaker > p {
 .dimmed pre span {
   color: gray!important;
 }
+
+.step.active::after {
+  content: "@MarioBodemann";
+  font-size: 18pt;
+  background: rgba(255,255,255,0.4);
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  padding:0.5em
+}
+
+
