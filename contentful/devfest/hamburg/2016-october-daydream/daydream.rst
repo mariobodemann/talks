@@ -30,7 +30,7 @@
 
 * 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
-* 📄: `bit.ly/mbvrnyc <http://bit.ly/mbvrnyc>`_
+* 📄: `bit.ly/mbvrhh <http://bit.ly/mbvrhh>`_
 
   * Please interrupt `👄👅 <http://blah.de/>`_!
 
