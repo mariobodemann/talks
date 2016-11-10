@@ -878,9 +878,8 @@ How to use the controller
 
 :class: new-section
 
-.. container:: center
-
-  VrView on Web/iOS/Android
+VrView on Web/iOS/Android
+=========================
 
 ----
 
