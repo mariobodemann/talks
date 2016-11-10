@@ -8,11 +8,6 @@
 
 :class: hide-background
 
-.. container:: scolling-background
-
-  .. image:: images/scrolling-background-blocky.png
-   :width: 30000px
-
 .. container:: main-title
 
   Daydreaming about Cardboards
@@ -30,7 +25,7 @@
 
 * 🔧: headless CMS: `contentful.com <http://contentful.com/>`_
 * 🐦: `@MarioBodemann <http://twitter.com/@MarioBodemann>`_
-* 📄: `bit.ly/mbvrhh <http://bit.ly/mbvrhh>`_
+* 📄: `bit.ly/mbvrhh <http://bit.ly/mbvrbln>`_
 
   * Please interrupt `👄👅 <http://blah.de/>`_!
 
