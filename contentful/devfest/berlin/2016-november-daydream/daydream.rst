@@ -41,9 +41,9 @@
 ----
 
 :data-x: -1000
-:data-y: 2300
-:data-z: 0
-:data-scale: 6
+:data-y: 1800
+:data-z: 1000
+:data-scale: 4
 :class: hide-background
 
 Agenda
@@ -88,7 +88,7 @@ Google Daydream
 
 ----
 
-.. image:: images/daydream-awesome.jpg
+.. image:: images/daydream-awesome.png
    :height: 800px
 
 ----
