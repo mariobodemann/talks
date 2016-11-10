@@ -47,6 +47,7 @@
 :class: hide-background
 
 Agenda
+======
 
 ----
 
@@ -82,7 +83,7 @@ Google Daydream
 * in different styles/interactions
 * *You just need a phone™*
 
-.. image:: images/cardboard-viewer.jpg
+.. image:: images/cardboard-viewer.png
   :class: bottom-right 
 
 ----
@@ -230,6 +231,7 @@ Google Daydream Technical Preview
 :data: new-section
 
 Unity demo
+==========
 
 ----
 
