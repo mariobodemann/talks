@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@font-face {
+    font-family: 'Droid Sans Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Droid Sans Mono'), local('Droid-Sans-Mono'), url(https://mariobodemann.github.io/talks/fonts/Droid-Sans-Mono.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://mariobodemann.github.io/talks/fonts/Lato-Regular.woff) format('woff');
+}
+
+body {
+    font-size: 300%;
+    text-align: center;
+    font-family: Lato;
+    color: #282b34;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(255, 255, 255), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(255, 255, 255), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(255, 255, 255), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(255, 255, 255), rgb(190, 190, 190));  
+}
+
+p {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    text-align: left;
+}
+
+pre {
+    text-align: left;
+    font-family: Droid Sans Mono
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+tt {
+    font-size: 125;
+    background-color: lightgray;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    padding-left: 0.3em;
+    line-height: 1.8em;
+    text-align: left;
+}
+
+a {
+    color: blue;
+}
+
+.hidden {
+    display: none;
+}
+
+.step {
+    padding: 1em;
+    width: 1300px;
+    height: 700px;
+}
+
+.code-slide {
+    font-family: Droid Sans Mono;
+    background-color: white;
+    padding: 0.5em
+}
+
+.hide-background {
+	background-color: transparent;
+}
+
+.new-section {
+    background-color: rgb(164, 196, 57);
+    width:1300px
+    height:768px
+}
+
+.last-slide {
+    background-color: white;
+    height: auto;
+    padding: auto;
+}
+
+div.main-title > p {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 80pt;
+  background-color: white;
+}
+
+div.main-subtitle > p {
+  position: relative;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  padding: 2%;
+  font-size: 42pt;
+  text-align: center;
+  background-color: white;
+}
+
+div.main-speaker > p {
+  position: relative;
+  top: 75%;
+  left: 0%;
+  width: 80%;
+  padding: 8%;
+  margin: 2%;
+  font-size: 42pt;
+  text-align: center;
+}
+
+.scolling-background {
+  position: absolute;
+  left: -50%;
+  top: -75%;
+}
+
+.center p {
+    text-align: center;
+}
+
+.center-image {
+    position: relative;
+    top: 5%;
+    height: 90%;
+    width: auto;
+    transform: translate3d(0px, 0px, 10px);
+}
+
+.center-image-huge {
+    position: relative;
+    top: -25%;
+    height: 150%;
+    width: auto;
+    left: -15%;
+}
+
+.bottom-right {
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  z-index: -1;
+}
+
+.dimmed pre span {
+  color: gray!important;
+}
+
+.step.active::after {
+  content: "@MarioBodemann";
+  font-size: 18pt;
+  background: rgba(255,255,255,0.4);
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  padding:0.5em
+}
