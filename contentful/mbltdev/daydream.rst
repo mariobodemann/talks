@@ -818,63 +818,6 @@ Difficulties in using Unity
 :data-x: 0
 :data-y: r1300
 :data-scale: 1
-:class: new-section
-
-.. image:: images/daydream-headset.png
-   :class: center-image
-
-----
-
-:data-x: r2000
-:data-y: r0
-
-How to use the controller
--------------------------
-
-.. code:: java
-
-    ControllerManager manager = 
-      new ControllerManager(this, 
-        new ControllerManager.EventListener() {
-      
-      public void onApiStatusChanged(int state) {
-      }
-
-      public void onRecentered() {
-      }
-    });
-
-.. note::
-
-   * ApiStatus changed: If controller gets invalid
-   * recenter: Long press on home button on controller, should assume current rotation is straight forward ...
-
-----
-
-.. code:: java
-
-    Controller controller = manager.getController();
-    if (controller != null) {
-      controller.timestamp
-      controller.orientation
-      controller.isTouching
-      controller.touch
-      controller.clickButtonState
-      controller.appButtonState
-      controller.homeButtonState
-      controller.volumeUpButtonState
-      controller.volumeDownButtonState
-    }
-
-.. note:: 
-
-  * orientation: Quaternion (xyzw)
-  * polling every frame
-
-----
-
-:data-x: 0
-:data-y: r1300
 
 :class: new-section
 
@@ -888,7 +831,7 @@ VrView on Web/iOS/Android
 
 .. raw:: html
 
-  <iframe width="100%" height="90%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=https://raw.githubusercontent.com/google/vrview/master/examples/pano/andes_2048.jpg&is_stereo=true"></iframe>
+  <iframe width="100%" height="90%" allowfullscreen frameborder="0" src="https://storage.googleapis.com/vrview/index.html?image=https://raw.githubusercontent.com/googlevr/vrview/master/examples/gallery/christ-redeemer.jpg&is_stereo=false"></iframe>
 
 .. note::
    VRView, available for 
@@ -922,7 +865,7 @@ How to write an photosphere app like this
 
 :class: hide-background
 
-.. image:: images/andes.jpg
+.. image:: images/christ.jpg
    :class: center-image
 
 .. note::
@@ -1095,10 +1038,8 @@ Limitations of Daydream for Android SDK
 
 ----
 
-:data-x: 10000
-:data-y: 9000
-:data-z: 0
-:data-scale: 12
+:data-x: r2000
+:data-y: r0
 :class: last-slide
 
 What will you build?
